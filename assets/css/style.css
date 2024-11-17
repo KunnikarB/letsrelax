@@ -463,10 +463,14 @@ body {
   place-content: center;
   visibility: hidden;
   transition: 0.25s var(--cubic-in);
-  & .active {
-    visibility: visible;
-    transition: 0.5s var(--cubic-out);
-  }
+}
+
+.navbar.active {
+  visibility: visible;
+  transform: translateY(-100%);
+  transition: 0.5s var(--cubic-out);
+  background-color: var(--coquelicot);
+  color: var(--white)
 }
 
 
@@ -504,9 +508,9 @@ body {
   color: var(--orange)
 }
 
-/* .navbar-link:is(:hover, :focus, .active) {
+.navbar-link:is(:hover, :focus, .active) {
   color: var(--coquelicot);
-} */
+}
 
 /*-----------------------------------*\
   #HERO
@@ -656,18 +660,24 @@ body {
 .about-coach {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
   margin-block-end: 30px;
+  
 }
 
 .about .coach-avatar {
   overflow: hidden;
   border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  
 }
 
 .about .coach-name {
   font-weight: var(--fw-700);
-  margin-block-end: 5px;
+  margin-block-end: 1px;
+  color: var(--coquelicot);
+  font-size: var(--fs-4);
 }
 
 .about .coach-title {
@@ -1103,6 +1113,9 @@ body {
   /**
    * REUSED STYLE
    */
+   .navbar-link {
+    margin-bottom: 1rem;
+   }
 
   .container {
     max-width: 540px;
@@ -1205,6 +1218,10 @@ body {
   /**
    * REUSED STYLE
    */
+
+   .navbar-link {
+    margin-bottom: 1rem;
+   }
 
   .container {
     max-width: 720px;
