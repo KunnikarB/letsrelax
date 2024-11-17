@@ -227,7 +227,8 @@ body {
 }
 
 .section-text {
-  font-size: var(--fs-6);
+  font-size: var(--fs-3);
+  color: var(--white)
 }
 
 .btn {
@@ -243,6 +244,7 @@ body {
 .btn-primary {
   background-color: var(--coquelicot);
   color: var(--white);
+  margin: 2rem;
 }
 
 .btn-primary:is(:hover, :focus) {
@@ -527,6 +529,7 @@ body {
   padding: 5px;
   padding-inline-end: 15px;
   border-radius: var(--radius-8);
+  margin-bottom: 1rem;
 }
 
 .hero-subtitle .strong {
