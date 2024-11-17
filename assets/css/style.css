@@ -244,7 +244,7 @@ body {
 .btn-primary {
   background-color: var(--coquelicot);
   color: var(--white);
-  margin: 2rem;
+  margin: 1rem;
 }
 
 .btn-primary:is(:hover, :focus) {
@@ -415,6 +415,13 @@ body {
   display: flex;
   align-items: center;
   margin-inline-start: -8px;
+
+  & span:hover {
+    color: var(--coquelicot);
+    background-color: var(--white);
+    border-radius: var(--radius-8);
+    transition: all 0.3ms linear;
+  }
 }
 
 .logo ion-icon {
@@ -456,13 +463,12 @@ body {
   place-content: center;
   visibility: hidden;
   transition: 0.25s var(--cubic-in);
+  & .active {
+    visibility: visible;
+    transition: 0.5s var(--cubic-out);
+  }
 }
 
-.navbar.active {
-  visibility: visible;
-  transform: translateY(-100%);
-  transition: 0.5s var(--cubic-out);
-}
 
 .nav-close-btn {
   position: absolute;
@@ -491,11 +497,16 @@ body {
   color: var(--coquelicot);
   padding: 4px;
   border-radius: var(--radius-8);
+  transition: all 0.3ms linear;
 }
 
-.navbar-link:is(:hover, :focus, .active) {
-  color: var(--orange);
+.navbar-list .navbar-link:last-child.active {
+  color: var(--orange)
 }
+
+/* .navbar-link:is(:hover, :focus, .active) {
+  color: var(--coquelicot);
+} */
 
 /*-----------------------------------*\
   #HERO
