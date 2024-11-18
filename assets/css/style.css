@@ -722,10 +722,22 @@ body {
 
 .class {
   padding-block-start: calc(var(--section-padding));
+  
+  & h3 {
+    color: var(--coquelicot);
+    margin: 0 auto;
+  }
 
   & p {
     color: var(--white);
     margin-bottom: 2rem;
+    font-size: var(--fs-5);
+  }
+
+   & .card-price {
+    color: var(--coquelicot);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-800);
   }
 }
 
@@ -755,6 +767,14 @@ body {
 
 .class-card .card-content {
   padding: 24px;
+
+}
+
+.card-content .title-wrapper{
+  display: flex;
+  align-items: center;
+
+  
 }
 
 .class-card .title-wrapper {
@@ -785,13 +805,22 @@ body {
 
 .class-card .progress-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   font-family: var(--ff-catamaran);
   color: var(--rich-black-fogra-29-1);
   font-size: var(--fs-6);
   font-weight: var(--fw-800);
-  margin-block-end: 8px;
+  
+  & img {
+    width: 50px;
+    margin: 0 auto; 
+  }
+
+  & a {
+    font-size: 14px;
+    padding: 5px;  
+  }
 }
 
 .class-card .progress-bg {
