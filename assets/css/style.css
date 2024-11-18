@@ -498,14 +498,15 @@ body {
 
 .navbar-list .navbar-link:last-child:hover {
   background-color: var(--white);
-  color: var(--coquelicot);
-  padding: 4px;
+  color: var(--orange);
   border-radius: var(--radius-8);
   transition: all 0.3ms linear;
 }
 
 .navbar-list .navbar-link:last-child.active {
-  color: var(--orange)
+  color: var(--coquelicot);
+  background-color: var(--white);
+  border-radius: var(--radius-8);
 }
 
 .navbar-link:is(:hover, :focus, .active) {
@@ -575,12 +576,14 @@ body {
   top: 20px;
   right: -50px;
   width: 190px;
+  color: var(--coquelicot)
 }
 
 .abs-img-2 {
   bottom: -50px;
   left: -40px;
   width: 280px;
+  color: var(--coquelicot);
 }
 
 .hero .abs-img {
