@@ -537,7 +537,10 @@ body {
 
 .hero-content {
   margin-block-end: 90px;
+}
 
+.hero-content h2, .hero-content h1 {
+  color: var(--coquelicot);
 }
 
 .hero-subtitle {
@@ -569,6 +572,9 @@ body {
 .hero .btn {
   margin-inline: auto;
   margin: 4rem;
+  margin: 0 auto;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 .hero-banner {
@@ -1128,7 +1134,12 @@ body {
 /**
  * responsive for larger than 575px screen
  */
-
+ @media (min-width: 320px) {
+  .hero-banner .contact-img {
+    width: 80%;
+    margin: 0 auto;
+  }
+ }
 @media (min-width: 575px) {
   /**
    * CUSTOM PROPERTY
@@ -1184,6 +1195,11 @@ body {
 
   .hero::after {
     height: 340px;
+  }
+
+  .hero-banner img {
+    width: 80%;
+    margin: 0 auto;
   }
 
   .abs-img-1 {
