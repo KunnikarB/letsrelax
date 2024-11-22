@@ -523,6 +523,7 @@ body {
   padding-block-start: calc(var(--section-padding) + 80px);
   padding-block-end: 0;
   overflow: hidden;
+  margin-top: 0;
 }
 
 .hero::after {
@@ -536,6 +537,7 @@ body {
 
 .hero-content {
   margin-block-end: 90px;
+
 }
 
 .hero-subtitle {
@@ -566,6 +568,7 @@ body {
 
 .hero .btn {
   margin-inline: auto;
+  margin: 4rem;
 }
 
 .hero-banner {
@@ -574,6 +577,7 @@ body {
 
 .hero-banner .contact-img {
   border-radius: 50%;
+  margin-bottom: 4rem;
 }
 
 .abs-img-1 {
