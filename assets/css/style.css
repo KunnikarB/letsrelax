@@ -173,6 +173,13 @@ body {
   padding-inline: 15px;
 }
 
+.container .center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
 .section {
   padding-block: var(--section-padding);
 }
@@ -625,9 +632,7 @@ body {
 \*-----------------------------------*/
 
 .about {
-  overflow: hidden;
-  background-color: #513424 ;
-  
+  overflow: hidden; 
 }
 
 .about-banner {

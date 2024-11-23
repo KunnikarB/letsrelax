@@ -51,16 +51,4 @@ window.addEventListener('scroll', function () {
   }
 });
 
-
-
-	var _bws = _bws || [];
-	_bws['d'] = 'a';
-	_bws['k'] = 'letsrelaxspa';
-	_bws['widgetUrl'] = 'https://widget.boka.se/';
-	(function() {
-		var bw = document.createElement('script');
-		bw.async = true; bw.type = 'text/javascript';
-		bw.src = 'https://widget.boka.se/widget.min.js';
-		var bs = document.getElementsByTagName('script')[0];
-		bs.parentNode.insertBefore(bw, bs);
-	})();
+	
