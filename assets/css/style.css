@@ -483,7 +483,7 @@ body {
   transform: translateY(-100%);
   transition: 0.5s var(--cubic-out);
   background-color: var(--coquelicot);
-  color: var(--white)
+  color: var(--white);
 }
 
 
@@ -883,6 +883,18 @@ body {
 /*-----------------------------------*\
   #BLOG
 \*-----------------------------------*/
+.blog-feed {
+  background-color: var(--coquelicot);
+  color: var(--white);
+  padding-block: 15px;
+  text-align: center;
+  border-radius: var(--radius-10);
+}
+
+.blog .blog-feed h2 {
+  color: var(--white);
+  text-align: center;
+}
 
 .blog .section-subtitle {
   margin-inline: auto;
