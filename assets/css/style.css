@@ -219,7 +219,13 @@ body {
   font-weight: var(--fw-900);
 }
 
-.h2,
+.container .h2 {
+  color: var(--coquelicot);
+  font-weight: var(--fw-800);
+  margin-bottom: 4rem;
+  margin-top: 6rem;
+}
+
 .h3 {
   color: var(--rich-black-fogra-29-1);
   font-weight: var(--fw-800);
@@ -880,6 +886,7 @@ body {
 
 .blog .section-subtitle {
   margin-inline: auto;
+  
 }
 
 .blog .container h2 {
