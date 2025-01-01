@@ -423,11 +423,15 @@ body {
 .logo {
   color: var(--rich-black-fogra-29-1);
   font-family: var(--ff-catamaran);
-  font-size: 3.5rem;
+  font-size: var(--fs-3);
   font-weight: var(--fw-900);
   display: flex;
   align-items: center;
   margin-inline-start: -8px;
+
+  & img {
+    margin-inline-end: 15px;
+  }
 
   & span:hover {
     color: var(--coquelicot);
@@ -440,8 +444,8 @@ body {
 .logo ion-icon {
   color: var(--coquelicot);
   font-size: 40px;
-  transform: rotate(90deg) translate(-2px, -5px);
-  margin-right: 5px;
+  /* transform: rotate(90deg) translate(-2px, -5px); */
+  margin-right: 8px;
 }
 
 .nav-open-btn {
@@ -737,9 +741,10 @@ body {
 }
 
 .about-content p {
-  color: var(--white);
-  font-size: var(--fs-6);
+  color: var(--orange);
+  font-size: var(--fs-5);
   margin-block: 15px 0;
+  font-weight: var(--fw-500);
 }
 
 /*-----------------------------------*\
@@ -1159,6 +1164,9 @@ body {
  * responsive for larger than 575px screen
  */
  @media (min-width: 320px) {
+  .navbar-link {
+    margin-bottom: 3rem;
+   }
   .hero-banner .contact-img {
     width: 90%;
     margin: 0 auto;
@@ -1168,24 +1176,18 @@ body {
   }
  }
 @media (min-width: 575px) {
-  /**
-   * CUSTOM PROPERTY
-   */
+  /*** CUSTOM PROPERTY */
 
   :root {
-    /**
-     * typography
-     */
+    /*** typography */
 
     --fs-1: 5.8rem;
     --fs-2: 4rem;
   }
 
-  /**
-   * REUSED STYLE
-   */
+  /*** REUSED STYLE */
    .navbar-link {
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
    }
 
   .container {
@@ -1199,18 +1201,14 @@ body {
     font-size: var(--fs-5);
   }
 
-  /**
-   * HEADER
-   */
+  /*** HEADER */
 
   .header .container {
     max-width: unset;
     padding-inline: 30px;
   }
 
-  /**
-   * HERO
-   */
+  /*** HERO */
 
   .hero-content {
     padding-inline: 40px;
@@ -1241,9 +1239,7 @@ body {
     width: 310px;
   }
 
-  /**
-   * ABOUT
-   */
+  /*** ABOUT */
 
   .about .wrapper {
     display: flex;
@@ -1256,17 +1252,13 @@ body {
     margin-block-end: 0;
   }
 
-  /**
-   * VIDEO
-   */
+  /*** VIDEO */
 
   .video-card .card-title {
     --fs-3: 3.5rem;
   }
 
-  /**
-   * FOOTER
-   */
+  /*** FOOTER */
 
   .footer-top .container {
     grid-template-columns: 1fr 1fr;
@@ -1279,24 +1271,18 @@ body {
  */
 
 @media (min-width: 768px) {
-  /**
-   * CUSTOM PROPERTY
-   */
+  /*** CUSTOM PROPERTY */
 
   :root {
-    /**
-     * typography
-     */
+    /*** typography */
 
     --fs-2: 4.5rem;
   }
 
-  /**
-   * REUSED STYLE
-   */
+  /*** REUSED STYLE */
 
    .navbar-link {
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
    }
 
   .container {
@@ -1307,9 +1293,7 @@ body {
     min-width: calc(50% - 12.5px);
   }
 
-  /**
-   * HERO
-   */
+  /*** HERO */
 
   .hero-banner {
     max-width: max-content;
@@ -1321,9 +1305,7 @@ body {
     right: 50px;
   }
 
-  /**
-   * FOOTER
-   */
+  /*** FOOTER */
 
   .footer-bottom .container {
     display: flex;
@@ -1341,18 +1323,14 @@ body {
  */
 
 @media (min-width: 992px) {
-  /**
-   * REUSED STYLE
-   */
+  /*** REUSED STYLE */
 
   .container,
   .header .container {
     max-width: 960px;
   }
 
-  /**
-   * HEADER
-   */
+  /*** HEADER */
 
   .nav-open-btn,
   .nav-close-btn {
@@ -1434,9 +1412,7 @@ body {
     background-color: var(--rich-black-fogra-29-1);
   }
 
-  /**
-   * HERO
-   */
+  /*** HERO */
 
   .hero {
     background-size: contain;
@@ -1482,9 +1458,7 @@ body {
     right: 0;
   }
 
-  /**
-   * ABOUT
-   */
+  /*** ABOUT */
 
   .about .container {
     display: grid;
@@ -1501,9 +1475,7 @@ body {
     gap: 30px;
   }
 
-  /**
-   * FOOTER
-   */
+  /*** FOOTER */
 
   .footer-top .container {
     grid-template-columns: 0.85fr 0.5fr 1fr 0.85fr;
@@ -1516,30 +1488,22 @@ body {
  */
 
 @media (min-width: 1200px) {
-  /**
-   * CUSTOM PROPERTY
-   */
+  /*** CUSTOM PROPERTY */
 
   :root {
-    /**
-     * typography
-     */
+    /*** typography */
 
     --fs-1: 7rem;
     --fs-2: 5.5rem;
     --fs-4: 2.2rem;
     --fs-5: 2rem;
 
-    /**
-     * spacing
-     */
+    /*** spacing */
 
     --section-padding: 120px;
   }
 
-  /**
-   * REUSED STYLE
-   */
+  /*** REUSED STYLE */
 
   .container,
   .header .container {
@@ -1563,17 +1527,13 @@ body {
     min-width: calc(33.33% - 20px);
   }
 
-  /**
-   * HEADER
-   */
+  /*** HEADER */
 
   .header .container {
     padding-inline: 0;
   }
 
-  /**
-   * HERO
-   */
+  /*** HERO */
 
   .hero::after {
     width: 420px;
@@ -1595,17 +1555,13 @@ body {
     width: 360px;
   }
 
-  /**
-   * ABOUT
-   */
+  /*** ABOUT */
 
   .about .wrapper {
     gap: 40px;
   }
 
-  /**
-   * CLASS, BLOG
-   */
+  /*** CLASS, BLOG */
 
   :is(.class-card, .blog-card) .card-content {
     padding: 30px;
@@ -1615,9 +1571,7 @@ body {
     padding: 15px 30px;
   }
 
-  /**
-   * FOOTER
-   */
+  /*** FOOTER */
 
   .footer-top .container {
     grid-template-columns: 1fr 0.6fr 0.9fr 1fr;
