@@ -103,6 +103,7 @@ button,
 strong,
 ion-icon {
   display: block;
+  
 }
 
 img {
@@ -186,7 +187,8 @@ body {
 
 .bg-dark {
   background-color: var(--rich-black-fogra-29-1);
-  color: var(--silver-metallic);
+  border-radius: var(--radius-5);
+  padding: 5px;
 }
 
 .has-bg-image {
@@ -227,7 +229,7 @@ body {
 }
 
 .h3 {
-  color: var(--rich-black-fogra-29-1);
+  color: var(--coquelicot);
   font-weight: var(--fw-800);
 }
 
@@ -935,9 +937,6 @@ body {
   height: 100%;
   overflow: hidden;
 
-  & h3 {
-    color: var(--coquelicot);
-  }
 }
 
 .blog-card .card-banner {
@@ -953,8 +952,8 @@ body {
 }
 
 .blog-card .card-meta {
-  background-color: var(--coquelicot);
-  color: var(--white);
+  background-color: var(--rich-black-fogra-29-1);
+  color: var(--coquelicot);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -983,11 +982,11 @@ body {
 }
 
 .blog-card .btn-link {
-  --color: var(--coquelicot);
+  --color: var(--rich-black-fogra-29-1);
 }
 
 .blog-card .btn-link:is(:hover, :focus) {
-  --color: var(--rich-black-fogra-29-1);
+  --color: var(--coquelicot);
 }
 
 .blog-card video {
