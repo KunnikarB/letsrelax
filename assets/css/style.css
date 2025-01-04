@@ -260,6 +260,10 @@ body {
   background-color: var(--orange);
 }
 
+.bd-pink {
+  border: 1px solid var(--pink);
+}
+
 .w-100 {
   width: 100%;
 }
@@ -765,11 +769,6 @@ body {
 
 .class {
   padding-block-start: calc(var(--section-padding));
-  
-  & h3 {
-    color: var(--pink);
-    margin: 0 auto;
-  }
 
   & p {
     color: var(--white);
@@ -782,7 +781,7 @@ body {
   }
 
    & .card-price {
-    color: var(--pink);
+    color: var(--white);
     font-size: var(--fs-6);
     font-weight: var(--fw-800);
     text-align: center;
@@ -790,6 +789,8 @@ body {
 
   & a:hover {
     color: var(--white);
+    box-shadow: var(--shadow-2);
+    display: inline-block;
   }
 }
 
@@ -820,6 +821,10 @@ body {
 
 .class-card .card-content {
   padding: 24px;
+}
+
+.card-content h3 {
+  color: var(--pink);
 }
 
 .class-card .title-wrapper {
@@ -854,7 +859,7 @@ body {
   justify-content: center;
   align-items: center;
   font-family: var(--ff-catamaran);
-  color: var(--rich-black-fogra-29-1);
+  color: var(--black);
   font-size: var(--fs-6);
   font-weight: var(--fw-800);
   
@@ -882,7 +887,7 @@ body {
 }
 
 .blog .blog-feed h2 {
-  color: var(--white);
+  color: var(--pink);
   text-align: center;
 }
 
@@ -902,7 +907,7 @@ body {
   border-radius: var(--radius-10);
   height: 100%;
   overflow: hidden;
-
+  padding: 30px;
 }
 
 .blog-card .card-banner {
@@ -952,11 +957,12 @@ body {
 }
 
 .blog-card .btn-link {
-  --color: var(--pink);
+  color: var(--pink);
 }
 
 .blog-card .btn-link:is(:hover, :focus) {
-  --color: var(--white);
+  color: var(--white);
+  box-shadow: var(--shadow-2);
 }
 
 .blog-card video {
@@ -1109,7 +1115,6 @@ body {
   display: inline-block;
   color: var(--pink);
   border: 1px solid var(--pink);
-  padding: 5px 15px;
   border-radius: var(--radius-8);
 }
 
