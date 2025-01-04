@@ -1031,9 +1031,9 @@ body {
   transition: var(--transition-1);
 }
 
-.footer-link:not(.address):is(:hover, :focus) {
+.footer-link:is(:hover, :focus) {
   color: var(--white);
-  
+  box-shadow: var(--shadow-2);
 }
 
 .footer-list-item {
