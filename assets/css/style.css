@@ -784,7 +784,7 @@ body {
     color: var(--white);
     font-size: var(--fs-6);
     font-weight: var(--fw-800);
-    text-align: center;
+    
   }
 
   & a:hover {
