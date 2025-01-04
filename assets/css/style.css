@@ -4,30 +4,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 :root {
-  /**
-   * colors
-   */
+  /*** colors*/
 
-  --rich-black-fogra-29_50: #000000;
-  --rich-black-fogra-29-1: #000000;
-  --rich-black-fogra-29-2: #000000;
-  --silver-metallic: hsl(212, 9%, 67%);
-  --coquelicot_20: #f26ca7;
-  --coquelicot_10: #c91568;
-  --sonic-silver: hsl(0, 0%, 47%);
-  --cadet-gray: hsl(214, 15%, 62%);
-  --light-gray: hsl(0, 0%, 80%);
-  --coquelicot: #f26ca7;
-  --gainsboro: hsl(0, 0%, 88%);
-  --white_20: hsl(0, 0%, 100%, 0.2);
-  --white_10: hsl(0, 0%, 100%, 0.1);
-  --black_10: hsl(0, 0%, 0%, 0.1);
+  --black: #000000;
+  --pink: #f26ca7;
   --white: #ffffff;
-  --orange: hsl(4, 90%, 58%);
+  --orange: #FD6E49;
 
-  /**
-   * typography
-   */
+  /*** typography*/
 
   --ff-catamaran: 'Catamaran', sans-serif;
   --ff-rubik: 'Rubik', sans-serif;
@@ -44,18 +28,14 @@
   --fw-700: 700;
   --fw-500: 500;
 
-  /**
-   * spacing
-   */
+  /*** spacing*/
 
   --section-padding: 80px;
 
-  /**
-   * shadow
-   */
+  /*** shadow*/
 
-  --shadow-1: 0 0 20px var(--black_10);
-  --shadow-2: 0px 10px 24px var(--coquelicot_20);
+  --shadow-1: 0 0 20px var(--black);
+  --shadow-2: 0px 10px 24px var(--coquelicot);
 
   /**
    * border radius
@@ -86,6 +66,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 
 li {
   list-style: none;
@@ -141,8 +122,8 @@ html {
 }
 
 body {
-  background-color: var(--white);
-  color: var(--sonic-silver);
+  background-color: var(--black);
+  color: var(--pink);
   font-size: 1.6rem;
   line-height: 1.6;
 }
@@ -156,15 +137,15 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: var(--light-gray);
+  border: 1px solid var(--pink);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--coquelicot);
+  background-color: var(--pink);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #280E09;
+  background-color: var(--orange);
 }
 
 /*-----------------------------------*\
@@ -258,19 +239,20 @@ body {
 }
 
 .btn-primary {
-  background-color: var(--coquelicot);
-  color: var(--white);
+  background-color: var(--rich-black-fogra-29-1);
+  color: var(--coquelicot);
   margin: 1rem;
+  border: 1px solid var(--coquelicot);
 }
 
 .btn-primary:is(:hover, :focus) {
-  background-color: var(--white);
+  background-color: var(--rich-black-fogra-29-1);
   color: var(--coquelicot);
   box-shadow: var(--shadow-2);
 }
 
 .btn-secondary {
-  background-color: var(--white);
+  background-color: var(--rich-black-fogra-29-1);
   color: var(--coquelicot);
 }
 
@@ -322,7 +304,6 @@ body {
 }
 
 .section-subtitle {
-  background-color: var(--coquelicot);
   color: var(--white);
   padding: 15px;
   border-radius: var(--radius-8);
@@ -333,9 +314,7 @@ body {
 }
 
 .btn-link {
-  --color: var(--white);
-
-  color: var(--color);
+  color: var(--white);
   font-size: var(--fs-6);
   font-weight: var(--fw-500);
   text-transform: uppercase;
@@ -348,7 +327,7 @@ body {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: var(--color);
+  background-color: var(--rich-black-fogra-29-1);
   transition: var(--transition-1);
 }
 
@@ -362,7 +341,7 @@ body {
 
 .img-holder {
   aspect-ratio: var(--width) / var(--height);
-  background-color: var(--light-gray);
+  background-color: var(--rich-black-fogra-29-1);
   overflow: hidden;
 }
 
@@ -411,7 +390,6 @@ body {
 }
 
 .header {
-  background-color: var(--white);
   position: fixed;
   top: 0;
   left: 0;
@@ -428,30 +406,31 @@ body {
 }
 
 .logo {
-  color: var(--white);
+  color: var(--coquelicot);
   font-family: var(--ff-catamaran);
   font-size: var(--fs-3);
   font-weight: var(--fw-900);
   display: flex;
   align-items: center;
   margin-inline-start: -8px;
+  
 
   & img {
     margin-inline-end: 15px;
   }
 
   & span:hover {
-    color: var(--orange);
-    background-color: var(--white);
+    color: var(--coquelicot);
+    background-color: var(--rich-black-fogra-29-1);
     border-radius: var(--radius-8);
     transition: all 0.3ms linear;
+    box-shadow: var(--shadow-2);
   } 
 }
 
 .logo ion-icon {
   color: var(--coquelicot);
   font-size: 40px;
-  /* transform: rotate(90deg) translate(-2px, -5px); */
   margin-right: 8px;
 }
 
@@ -462,7 +441,7 @@ body {
 }
 
 .nav-open-btn .line {
-  background-color: var(--white);
+  background-color: var(--rich-black-fogra-29-1);
   width: 30px;
   height: 3px;
 }
@@ -477,7 +456,7 @@ body {
 }
 
 .navbar {
-  background-color: var(--white);
+  background-color: var(--rich-black-fogra-29-1);
   position: fixed;
   top: 100%;
   left: 0;
@@ -493,7 +472,7 @@ body {
   visibility: visible;
   transform: translateY(-100%);
   transition: 0.5s var(--cubic-out);
-  background-color: var(--coquelicot);
+  background-color: var(--rich-black-fogra-29-1);
   color: var(--white);
 }
 
@@ -502,7 +481,7 @@ body {
   position: absolute;
   top: 10px;
   right: 15px;
-  background-color: var(--orange);
+  background-color: var(--rich-black-fogra-29-1);
   color: var(--white);
   font-size: 40px;
   padding: 10px;
@@ -521,15 +500,16 @@ body {
 }
 
 .navbar-list .navbar-link:last-child:hover {
-  background-color: var(--white);
-  color: var(--orange);
+  background-color: var(--rich-black-fogra-29-1);
+  color: var(--coquelicot);
   border-radius: var(--radius-8);
   transition: all 0.3ms linear;
+  box-shadow: var(--shadow-2);
 }
 
 .navbar-list .navbar-link:last-child.active {
   color: var(--coquelicot);
-  background-color: var(--white);
+  background-color: var(--rich-black-fogra-29-1);
   border-radius: var(--radius-8);
 }
 
@@ -548,6 +528,7 @@ body {
   padding-block-end: 0;
   overflow: hidden;
   margin-top: 0;
+  border: solid 1px var(--coquelicot);
 }
 
 .hero::after {
@@ -555,7 +536,7 @@ body {
   left: 0;
   width: 100%;
   height: 240px;
-  background-color: var(--coquelicot);
+  background-color: var(--rich-black-fogra-29-1);
   z-index: -1;
 }
 
@@ -569,7 +550,7 @@ body {
 
 .hero-subtitle {
   background-color: var(--white_10);
-  color: var(--white);
+  color: var(--coquelicot);
   margin-inline: auto;
   padding: 5px;
   padding-inline-end: 15px;
@@ -579,7 +560,8 @@ body {
 
 .hero-subtitle .strong {
   display: inline-block;
-  background-color: var(--coquelicot);
+  background-color: var(--rich-black-fogra-29-1);
+  color: var(--coquelicot);
   padding: 2px 15px;
   margin-inline-end: 15px;
   border-radius: var(--radius-5);
