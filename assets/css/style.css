@@ -35,7 +35,7 @@
   /*** shadow*/
 
   --shadow-1: 0 0 20px var(--black);
-  --shadow-2: 0px 10px 24px var(--coquelicot);
+  --shadow-2: 0px 10px 24px var(--pink);
 
   /**
    * border radius
@@ -168,7 +168,7 @@ body {
 }
 
 .bg-dark {
-  background-color: var(--rich-black-fogra-29-1);
+  background-color: var(--black);
   border-radius: var(--radius-5);
   padding: 5px;
 }
@@ -198,20 +198,19 @@ body {
 }
 
 .h1 {
-  color: var(--white);
   font-size: var(--fs-1);
   font-weight: var(--fw-900);
 }
 
 .container .h2 {
-  color: var(--coquelicot);
+  color: var(--pink);
   font-weight: var(--fw-800);
   margin-bottom: 4rem;
   margin-top: 6rem;
 }
 
 .h3 {
-  color: var(--coquelicot);
+  color: var(--pink);
   font-weight: var(--fw-800);
 }
 
@@ -239,21 +238,21 @@ body {
 }
 
 .btn-primary {
-  background-color: var(--rich-black-fogra-29-1);
-  color: var(--coquelicot);
+  background-color: var(--black);
+  color: var(--pink);
   margin: 1rem;
-  border: 1px solid var(--coquelicot);
+  border: 1px solid var(--pink);
 }
 
 .btn-primary:is(:hover, :focus) {
-  background-color: var(--rich-black-fogra-29-1);
-  color: var(--coquelicot);
+  background-color: var(--black);
+  color: var(--pink);
   box-shadow: var(--shadow-2);
 }
 
 .btn-secondary {
-  background-color: var(--rich-black-fogra-29-1);
-  color: var(--coquelicot);
+  background-color: var(--black);
+  color: var(--pink);
 }
 
 .btn-secondary:is(:hover, :focus) {
@@ -262,10 +261,6 @@ body {
 
 .w-100 {
   width: 100%;
-}
-
-.red {
-  color: red;
 }
 
 .circle,
@@ -327,12 +322,12 @@ body {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: var(--rich-black-fogra-29-1);
+  background-color: var(--black);
   transition: var(--transition-1);
 }
 
 .btn-link:is(:hover, :focus) {
-  --color: var(--coquelicot);
+  --color: var(--pink);
 }
 
 .text-center {
@@ -341,7 +336,7 @@ body {
 
 .img-holder {
   aspect-ratio: var(--width) / var(--height);
-  background-color: var(--rich-black-fogra-29-1);
+  background-color: var(--black);
   overflow: hidden;
 }
 
@@ -374,7 +369,7 @@ body {
 }
 
 .has-scrollbar::-webkit-scrollbar-thumb:hover {
-  background-color: var(--coquelicot);
+  background-color: var(--pink);
 }
 
 .has-scrollbar::-webkit-scrollbar-button {
@@ -406,7 +401,7 @@ body {
 }
 
 .logo {
-  color: var(--coquelicot);
+  color: var(--pink);
   font-family: var(--ff-catamaran);
   font-size: var(--fs-3);
   font-weight: var(--fw-900);
@@ -420,28 +415,28 @@ body {
   }
 
   & span:hover {
-    color: var(--coquelicot);
-    background-color: var(--rich-black-fogra-29-1);
+    color: var(--pink);
+    background-color: var(--black);
     border-radius: var(--radius-8);
     transition: all 0.3ms linear;
     box-shadow: var(--shadow-2);
   } 
 }
 
-.logo ion-icon {
-  color: var(--coquelicot);
+ .logo ion-icon {
+  color: var(--pink);
   font-size: 40px;
   margin-right: 8px;
 }
 
 .nav-open-btn {
-  background-color: var(--coquelicot);
+  background-color: var(--pink);
   padding: 20px 15px;
   border-radius: var(--radius-8);
 }
 
 .nav-open-btn .line {
-  background-color: var(--rich-black-fogra-29-1);
+  background-color: var(--black);
   width: 30px;
   height: 3px;
 }
@@ -456,7 +451,7 @@ body {
 }
 
 .navbar {
-  background-color: var(--rich-black-fogra-29-1);
+  background-color: var(--black);
   position: fixed;
   top: 100%;
   left: 0;
@@ -472,7 +467,7 @@ body {
   visibility: visible;
   transform: translateY(-100%);
   transition: 0.5s var(--cubic-out);
-  background-color: var(--rich-black-fogra-29-1);
+  background-color: var(--black);
   color: var(--white);
 }
 
@@ -481,7 +476,7 @@ body {
   position: absolute;
   top: 10px;
   right: 15px;
-  background-color: var(--rich-black-fogra-29-1);
+  background-color: var(--black);
   color: var(--white);
   font-size: 40px;
   padding: 10px;
@@ -500,21 +495,22 @@ body {
 }
 
 .navbar-list .navbar-link:last-child:hover {
-  background-color: var(--rich-black-fogra-29-1);
-  color: var(--coquelicot);
+  background-color: var(--black);
+  color: var(--pink);
   border-radius: var(--radius-8);
   transition: all 0.3ms linear;
   box-shadow: var(--shadow-2);
 }
 
 .navbar-list .navbar-link:last-child.active {
-  color: var(--coquelicot);
-  background-color: var(--rich-black-fogra-29-1);
+  color: var(--pink);
+  background-color: var(--black);
   border-radius: var(--radius-8);
 }
 
 .navbar-link:is(:hover, :focus, .active) {
-  color: var(--coquelicot);
+  color: var(--pink);
+  box-shadow: var(--shadow-2);
 }
 
 /*-----------------------------------*\
