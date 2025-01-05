@@ -1092,7 +1092,7 @@ body {
 }
 
 .footer-list-item .icon {
-  background-color: var(--pink);
+  background-color: var(--orange);
   color: var(--black);
   font-size: 24px;
   padding: 8px;
@@ -1112,7 +1112,7 @@ body {
 }
 
 .social-link {
-  background-color: var(--pink);
+  background-color: var(--orange);
   color: var(--black);
   padding: 13px;
   border-radius: 50%;
