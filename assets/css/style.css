@@ -1460,7 +1460,7 @@ body {
   }
 
   .header.active .logo {
-    color: var(--rich-black-fogra-29-1);
+    color: var(--black);
   }
 
   .navbar,
