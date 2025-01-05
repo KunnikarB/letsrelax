@@ -674,12 +674,6 @@ body {
     border-radius: var(--radius-10);
     padding: 4px;
    }
-
-   & img {
-    width: 100%;
-    height: 100%;
-   }
-
 }
 
 @keyframes moveUp {
@@ -717,9 +711,8 @@ body {
 
 .about .coach-avatar {
   overflow: hidden;
-  border-radius: 50%;
+  border-radius:50%;
   width: 100px;
-  height: 100px;  
 }
 
 .about .coach-name {
@@ -747,10 +740,13 @@ body {
   text-align: justify;
 }
 
-.about .container img {
-  
+.about .container-img {
+  display: flex;
+  gap: 20px;
   width: 100%;
   height: 100%;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
 /*-----------------------------------*\
@@ -1221,6 +1217,16 @@ body {
   text-align: justify;  
   }
 
+  .about .container-img {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about .coach-avatar {
+    width: 70px;
+  }
+
  }
 @media (min-width: 575px) {
   /*** CUSTOM PROPERTY */
@@ -1310,6 +1316,13 @@ body {
 
   .about-coach {
     margin-block-end: 0;
+  }
+
+
+  .about .container-img {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   /*** VIDEO */
