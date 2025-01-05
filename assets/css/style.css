@@ -640,8 +640,7 @@ body {
 }
 
 .about-banner {
-  margin-block-end: 50px;
-  
+  margin-block-end: 50px;  
 }
 
 .about-banner::after {
