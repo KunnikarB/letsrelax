@@ -174,6 +174,11 @@ body {
   padding: 5px;
 }
 
+.bd-pink {
+  border: 1px solid var(--pink);
+  padding: 13px;
+}
+
 .has-bg-image {
   background-repeat: no-repeat;
   background-position: top left;
@@ -258,10 +263,6 @@ body {
 
 .btn-secondary:is(:hover, :focus) {
   background-color: var(--orange);
-}
-
-.bd-pink {
-  border: 1px solid var(--pink);
 }
 
 .w-100 {
@@ -545,13 +546,15 @@ body {
 }
 
 .hero-subtitle {
-  color: var(--pink);
+  color: var(--white);
   margin-inline: auto;
   padding: 5px;
   padding-inline-end: 15px;
   border-radius: var(--radius-8);
   margin-bottom: 1rem;
   border: 1px solid var(--pink);
+  text-align: justify;
+  padding: 13px;
 }
 
 .hero-subtitle .strong {
@@ -567,8 +570,14 @@ body {
   margin-block: 30px 8px;
 }
 
-.hero .section-text {
+.hero .section-text, .hero .section-title-about {
   margin-block-end: 40px;
+  text-align: justify;  
+}
+
+.hero .section-text-about {
+  color: var(--white);
+  font-size: var(--fs-4);
 }
 
 .hero .btn {
@@ -729,10 +738,11 @@ body {
 }
 
 .about-content p {
-  color: var(--orange);
-  font-size: var(--fs-5);
+  color: var(--white);
+  font-size: var(--fs-4);
   margin-block: 15px 0;
   font-weight: var(--fw-500);
+  text-align: justify;
 }
 
 .about .container img {
@@ -751,6 +761,10 @@ body {
   & h2 {
     color: var(--pink);
   
+  }
+
+  & .section-text {
+    text-align: justify;
   }
   
 }
@@ -790,6 +804,10 @@ body {
     box-shadow: var(--shadow-2);
     display: inline-block;
   }
+}
+
+.class .section-text {
+  text-align: justify;
 }
 
 .class .section-subtitle {
@@ -847,9 +865,13 @@ body {
 
 .class-card .card-text {
   color: var(--white);
-  font-size: var(--fs-6);
+  font-size: var(--fs-5);
   font-weight: var(--fw-500);
   margin-block: 16px 12px; 
+
+  & strong {
+    color: var(--pink);
+  }
 }
 
 .swipe {
@@ -861,7 +883,7 @@ body {
 }
 
  .swipe-icon {
-  background-color: var(--pink);
+  background-color: var(--white);
   border-radius: 50%;
   padding: 4px;
   width: 30px;
@@ -911,8 +933,9 @@ body {
 }
 
 .blog .container h2 {
-  color: var(--pink);
+  color: var(--white);
 }
+
 
 
 .blog-card {
@@ -955,6 +978,15 @@ body {
   padding: 25px;
 }
 
+.card-content .blog-title {
+  color: var(--pink);
+}
+
+.card-content h3 {
+  color: var(--white);
+  text-align: justify;
+}
+
 .blog-card .card-title {
   transition: var(--transition-1);
 }
@@ -964,7 +996,7 @@ body {
 }
 
 .blog-card .card-text {
-  font-size: var(--fs-6);
+  font-size: var(--fs-5);
   margin-block: 8px 12px;
   color: var(--white);
   font-weight: var(--fw-500);
@@ -972,6 +1004,9 @@ body {
 
 .blog-card .btn-link {
   color: var(--pink);
+  border: 1px solid var(--pink);
+  padding: 5px 10px;
+  border-radius: var(--radius-10);
 }
 
 .blog-card .btn-link:is(:hover, :focus) {
@@ -1176,6 +1211,13 @@ body {
     width: 80%;
     margin: 0 auto;
   }
+  .hero .section-text {
+  text-align: center;  
+  }
+
+  .hero .section-text-about {
+  text-align: justify;  
+  }
 
  }
 @media (min-width: 575px) {
@@ -1220,7 +1262,14 @@ body {
 
   .hero-content {
     padding-inline: 40px;
+  }
 
+  .hero .section-text {
+  text-align: center;  
+  }
+
+  .hero .section-text-about {
+  text-align: justify;  
   }
 
   .hero-subtitle .strong {
@@ -1313,6 +1362,14 @@ body {
   .hero-banner {
     max-width: max-content;
     margin-inline: auto;
+  }
+
+  .hero .section-text {
+  text-align: center;  
+  }
+
+  .hero .section-text-about {
+  text-align: justify;  
   }
 
   .abs-img-1 {
@@ -1468,6 +1525,10 @@ body {
   .hero-content {
     padding-inline: 0;
     margin-block-end: 0;
+  }
+   
+  .hero .section-text, .hero .section-text-about {
+  text-align: justify;  
   }
 
   .hero-subtitle,
