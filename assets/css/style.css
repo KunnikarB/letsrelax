@@ -851,7 +851,23 @@ body {
   color: var(--white);
   font-size: var(--fs-6);
   font-weight: var(--fw-500);
-  margin-block: 16px 12px;
+  margin-block: 16px 12px; 
+}
+
+.swipe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-block: 20px;
+}
+
+ .swipe-icon {
+  background-color: var(--pink);
+  border-radius: 50%;
+  padding: 4px;
+  width: 30px;
+  height: 30px; 
 }
 
 .class-card .progress-wrapper {
