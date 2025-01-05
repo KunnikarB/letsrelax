@@ -1,5 +1,3 @@
-// 'use strict';
-
 /**
  * add event on element
  */
@@ -50,5 +48,3 @@ window.addEventListener('scroll', function () {
     backTopBtn.classList.remove('active');
   }
 });
-
-	
