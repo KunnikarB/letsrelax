@@ -992,6 +992,7 @@ body {
 
 .footer {
   font-size: var(--fs-6);
+  font-weight: var(--fw-500);
 }
 
 .footer-top .container {
@@ -1095,13 +1096,19 @@ body {
   color: var(--white);
   text-align: center;
   padding-block: 15px;
+
+  & .copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+  
+}
+
 
 .copyright-link {
   display: inline-block;
   color: var(--pink);
-  border: 1px solid var(--pink);
-  border-radius: var(--radius-8);
 }
 
 .copyright-link:hover {
