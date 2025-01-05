@@ -390,9 +390,9 @@ body {
 }
 
 .header {
-  position: static;
-  /* top: 0;
-  left: 0; */
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   padding-block: 10px;
   box-shadow: var(--shadow-1);
