@@ -390,9 +390,9 @@ body {
 }
 
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: static;
+  /* top: 0;
+  left: 0; */
   width: 100%;
   padding-block: 10px;
   box-shadow: var(--shadow-1);
@@ -493,8 +493,6 @@ body {
   font-size: var(--fs-3);
   font-weight: var(--fw-900);
   text-align: center;
-  /* padding-block: 10px;
-  margin-block-end: 20px; */
   transition: var(--transition-1);
   margin-right: 15px;
 }
@@ -543,7 +541,7 @@ body {
 }
 
 .hero-content h2, .hero-content h1 {
-  color: var(--coquelicot);
+  color: var(--pink);
 }
 
 .hero-subtitle {
@@ -1073,34 +1071,6 @@ body {
   box-shadow: var(--shadow-2);
 }
 
-/* .footer-form {
-  position: relative;
-  margin-block-end: 30px;
-}
-
-.footer-form .input-field {
-  background-color: var(--white);
-  color: var(--black);
-  padding-block: 18px;
-  padding-inline: 30px 80px;
-  border-radius: var(--radius-10);
-}
-
-.footer-form .btn {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  bottom: 5px;
-  padding: 0;
-  font-size: 26px;
-  padding-inline: 12px;
-}
-
-.footer-form .btn-primary:is(:hover, :focus) {
-  background-color: var(--pink);
-  color: var(--white);  
-} */
-
 .social-list {
   display: flex;
   gap: 15px;
@@ -1146,26 +1116,6 @@ body {
   gap: 15px;
   margin-block-start: 10px;
 }
-
-/* .footer-bottom-link {
-  padding-inline-start: 20px;
-  transition: var(--transition-1);
-  box-shadow: var(--shadow-2);
-}
-
-.footer-bottom-link::before {
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-}
-
-.footer-bottom-link:is(:hover, :focus) {
-  background-color: var(--pink);
-  color: var(--black);
-} */
 
 /*-----------------------------------*\
   #BACK TO TOP
