@@ -1449,6 +1449,15 @@ body {
     z-index: -1;
   }
 
+  .hero .img {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  iframe {
+    width: 100%;
+  }
+
   .hero .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
