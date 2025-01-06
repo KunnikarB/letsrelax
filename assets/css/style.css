@@ -399,6 +399,7 @@ body {
   padding-block: 10px;
   box-shadow: var(--shadow-1);
   z-index: 4;
+  border: none;
 }
 
 .header > .container {
@@ -1207,9 +1208,6 @@ body {
     margin-bottom: 3rem;
    }
     
-   .logo {
-    font-size: 20px;
-   }
    .logo img {
     width: 50px;
   }
@@ -1418,7 +1416,7 @@ body {
   }
 
   /*** REUSED STYLE */
-
+  
    .navbar-link {
     margin-bottom: 3rem;
    }
