@@ -7,9 +7,15 @@
   /*** colors*/
 
   --black: #000000;
-  --pink: #f26ca7;
+  --pink: #EE3F99;
   --white: #ffffff;
   --orange: #FD3D0B;
+  --lavender: #E6E6FA;
+  --pink-bg: #F8909D;
+  --green-btn: #7A9649;
+  --brown: #3C2D24;
+  --lemon-green: #808E5D;
+  --light-pink: #FFB6C1;
 
   /*** typography*/
 
@@ -34,8 +40,8 @@
 
   /*** shadow*/
 
-  --shadow-1: 0 0 20px var(--black);
-  --shadow-2: 0px 10px 24px var(--pink);
+  --shadow-1: 0 0 20px var(--pink);
+  --shadow-2: 0px 10px 24px var(--lemon-green);
 
   /**
    * border radius
@@ -119,14 +125,15 @@ html {
   font-family: var(--ff-rubik);
   font-size: 10px;
   scroll-behavior: smooth;
+  
 }
 
 body {
-  background-color: var(--black);
-  color: var(--pink);
+  background-color: var(--light-pink);
+  color: var(--black);
   font-size: 1.6rem;
   line-height: 1.6;
-  border: 1px solid var(--pink);
+  border: 1px solid var(--green-btn);
 }
 
 :focus-visible {
@@ -138,15 +145,15 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  border: 1px solid var(--pink);
+  border: 1px solid var(--green-btn);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--pink);
+  background-color: var(--green-btn);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--orange);
+  background-color: var(--pink);
 }
 
 /*-----------------------------------*\
@@ -169,9 +176,10 @@ body {
 }
 
 .bg-dark {
-  background-color: var(--black);
+  background-color: var(--pink-bg);
   border-radius: var(--radius-5);
   padding: 5px;
+  margin: 4rem;
 }
 
 .bd-pink {
@@ -210,14 +218,14 @@ body {
 }
 
 .container .h2 {
-  color: var(--pink);
+  color: var(--white);
   font-weight: var(--fw-800);
   margin-bottom: 4rem;
   margin-top: 6rem;
 }
 
 .h3 {
-  color: var(--pink);
+  color: var(--white);
   font-weight: var(--fw-800);
 }
 
@@ -245,25 +253,27 @@ body {
 }
 
 .btn-primary {
-  background-color: var(--black);
-  color: var(--pink);
+  background-color: var(--green-btn);
+  color: var(--white);
   margin: 1rem;
-  border: 1px solid var(--pink);
+  border: 1px solid var(--white);
 }
 
 .btn-primary:is(:hover, :focus) {
-  background-color: var(--black);
-  color: var(--pink);
-  box-shadow: var(--shadow-2);
+  background-color: var(--pink);
+  color: var(--white);
+  box-shadow: var(--shadow-1);
 }
 
 .btn-secondary {
-  background-color: var(--black);
-  color: var(--pink);
+  background-color: var(--pink-bg);
+  color: var(--black);
 }
 
 .btn-secondary:is(:hover, :focus) {
-  background-color: var(--orange);
+  background-color: var(--pink);
+  color: var(--white);
+  box-shadow: var(--shadow-1);
 }
 
 .w-100 {
@@ -329,7 +339,7 @@ body {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: var(--black);
+  background-color: var(--green-btn);
   transition: var(--transition-1);
 }
 
@@ -343,7 +353,7 @@ body {
 
 .img-holder {
   aspect-ratio: var(--width) / var(--height);
-  background-color: var(--black);
+  background-color: var(--light-pink);
   overflow: hidden;
 }
 
@@ -376,7 +386,7 @@ body {
 }
 
 .has-scrollbar::-webkit-scrollbar-thumb:hover {
-  background-color: var(--pink);
+  background-color: var(--light-pink);
 }
 
 .has-scrollbar::-webkit-scrollbar-button {
@@ -397,9 +407,11 @@ body {
   left: 0;
   width: 100%;
   padding-block: 10px;
-  box-shadow: var(--shadow-1);
+  /* box-shadow: var(--shadow-1); */
   z-index: 4;
   border: none;
+  background-color: var(--pink-bg);
+  
 }
 
 .header > .container {
@@ -409,7 +421,6 @@ body {
 }
 
 .logo {
-  color: var(--pink);
   font-family: var(--ff-catamaran);
   font-size: var(--fs-3);
   font-weight: var(--fw-900);
@@ -423,8 +434,8 @@ body {
   }
 
   & span:hover {
-    color: var(--pink);
-    background-color: var(--black);
+
+    background-color: var(--pink);
     border-radius: var(--radius-8);
     transition: all 0.3ms linear;
     box-shadow: var(--shadow-2);
@@ -432,19 +443,21 @@ body {
 }
 
  .logo ion-icon {
-  color: var(--pink);
+  color: var(--green-btn);
   font-size: 40px;
   margin-right: 8px;
 }
 
+
+
 .nav-open-btn {
-  background-color: var(--pink);
+  background-color: var(--green-btn);
   padding: 20px 15px;
   border-radius: var(--radius-8);
 }
 
 .nav-open-btn .line {
-  background-color: var(--black);
+  background-color: var(--white);
   width: 30px;
   height: 3px;
 }
@@ -459,7 +472,7 @@ body {
 }
 
 .navbar {
-  background-color: var(--black);
+  background-color: var(--light-pink);
   position: fixed;
   top: 100%;
   left: 0;
@@ -475,7 +488,7 @@ body {
   visibility: visible;
   transform: translateY(-100%);
   transition: 0.5s var(--cubic-out);
-  background-color: var(--black);
+  background-color: var(--light-pink);
   color: var(--white);
 }
 
@@ -484,7 +497,7 @@ body {
   position: absolute;
   top: 10px;
   right: 15px;
-  background-color: var(--black);
+  background-color: var(--green-btn);
   color: var(--white);
   font-size: 40px;
   padding: 10px;
@@ -501,22 +514,22 @@ body {
 }
 
 .navbar-list .navbar-link:last-child:hover {
-  background-color: var(--black);
-  color: var(--pink);
+  background-color: var(--pink);
+  color: var(--white);
   border-radius: var(--radius-8);
   transition: all 0.3ms linear;
-  box-shadow: var(--shadow-2);
+  box-shadow: var(--shadow-1);
 }
 
 .navbar-list .navbar-link:last-child.active {
-  color: var(--pink);
-  background-color: var(--black);
+  color: var(--white);
+  background-color: var(--green-btn);
   border-radius: var(--radius-8);
 }
 
 .navbar-link:is(:hover, :focus, .active) {
-  color: var(--pink);
-  box-shadow: var(--shadow-2);
+  color: var(--light-pink);
+  box-shadow: var(--shadow-1);
 }
 
 /*-----------------------------------*\
@@ -548,7 +561,7 @@ body {
 }
 
 .hero-content h2 {
-  color: var(--pink);
+  color: var(--white);
 }
 
 .hero-subtitle {
@@ -566,7 +579,7 @@ body {
 .hero-subtitle .strong {
   display: inline-block;
   background-color: var(--pink);
-  color: var(--black);
+  color: var(--white);
   padding: 2px 15px;
   margin-inline-end: 15px;
   border-radius: var(--radius-5);
@@ -755,13 +768,14 @@ body {
   }
 
   & .section-text {
-    text-align: justify;
+    text-align: center;
   }
   
 }
 .video-player{
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
+  margin: 0 auto;
 }
 
 
@@ -816,6 +830,9 @@ body {
   height: 100%;
   overflow: hidden;
   border: 1px solid var(--pink);
+  & h3 {
+    color: var(--pink);
+  }
 }
 
 .class-card .card-banner img {
@@ -930,8 +947,8 @@ body {
 
 
 .blog-card {
-  background-color: var(--black);
-  border: 1px solid var(--pink);
+  background-color: var(--lemon-green);
+  border: 1px solid var(--pink-bg);
   border-radius: var(--radius-10);
   height: 100%;
   overflow: hidden;
@@ -952,8 +969,8 @@ body {
 }
 
 .blog-card .card-meta {
-  background-color: var(--black);
-  color: var(--pink);
+  background-color: var(--light-pink);
+  color: var(--green-btn);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -962,7 +979,7 @@ body {
   font-weight: var(--fw-500);
   text-transform: uppercase;
   border-top-right-radius: var(--radius-10);
-  border: 1px solid var(--pink);
+  border: 1px solid var(--green-btn);
 }
 
 .blog-card .card-content {
@@ -971,6 +988,13 @@ body {
 
 .card-content .blog-title {
   color: var(--pink);
+  margin-top: 2rem;
+  text-align: left;
+
+}
+
+.card-content .blog-title-back {
+  color: var(--black);
   margin-top: 2rem;
   text-align: left;
 }
@@ -984,9 +1008,9 @@ body {
   transition: var(--transition-1);
 }
 
-.blog-card .card-title:is(:hover, :focus) {
+/* .blog-card .card-title:is(:hover, :focus) {
   color: var(--pink);
-}
+} */
 
 .blog-card .card-text {
   font-size: var(--fs-5);
@@ -996,15 +1020,15 @@ body {
 }
 
 .blog-card .btn-link {
-  color: var(--pink);
-  border: 1px solid var(--pink);
+  color: var(--black);
+  border: 1px solid var(--white);
   padding: 5px 10px;
   border-radius: var(--radius-10);
 }
 
 .blog-card .btn-link:is(:hover, :focus) {
-  color: var(--white);
-  box-shadow: var(--shadow-2);
+  color: var(--pink);
+  box-shadow: var(--shadow-1);
 }
 
 .blog-card video {
@@ -1022,6 +1046,7 @@ body {
   font-size: var(--fs-6);
   font-weight: var(--fw-500);
   margin-top: 80px;
+  color: var(--white);
 }
 
 .footer-top .container {
@@ -1064,7 +1089,7 @@ body {
   bottom: 0;
   width: 70px;
   height: 1px;
-  background-color: var(--pink);
+  background-color: var(--green-btn);
 }
 
 .footer-list > li:not(:first-child) {
@@ -1076,7 +1101,7 @@ body {
 }
 
 .footer-link:is(:hover, :focus) {
-  color: var(--white);
+  color: var(--green-btn);
   box-shadow: var(--shadow-2);
 }
 
@@ -1088,7 +1113,7 @@ body {
 }
 
 .footer-list-item .icon {
-  background-color: var(--orange);
+  background-color: var(--green-btn);
   color: var(--black);
   font-size: 24px;
   padding: 8px;
@@ -1098,7 +1123,7 @@ body {
 .footer-list-item .icon:hover {
   background-color: var(--black);
   color: var(--pink);
-  box-shadow: var(--shadow-2);
+  box-shadow: var(--shadow-1);
 }
 
 .social-list {
@@ -1108,7 +1133,7 @@ body {
 }
 
 .social-link {
-  background-color: var(--orange);
+  background-color: var(--green-btn);
   color: var(--black);
   padding: 8px;
   border-radius: 50%;
@@ -1117,13 +1142,13 @@ body {
 }
 
 .social-link:is(:hover, :focus) {
-  box-shadow: var(--shadow-2);
+  box-shadow: var(--shadow-1);
   background-color: var(--black);
   color: var(--pink);
 }
 
 .footer-bottom {
-  color: var(--white);
+  color: var(--pink);
   text-align: center;
   padding-block: 15px;
 
@@ -1136,23 +1161,23 @@ body {
 }
 
 
-.copyright-link {
+/* .copyright-link {
   display: inline-block;
   color: var(--pink);
-}
+} */
 
-.copyright-link:hover {
+/* .copyright-link:hover {
   color: var(--black);
   background-color: var(--pink);
   box-shadow: var(--shadow-2);
-}
+} */
 
-.footer-bottom-list {
+/* .footer-bottom-list {
   display: flex;
   justify-content: center;
   gap: 15px;
   margin-block-start: 10px;
-}
+} */
 
 /*-----------------------------------*\
   #BACK TO TOP
