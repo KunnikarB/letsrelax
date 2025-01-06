@@ -588,7 +588,6 @@ body {
   margin-bottom: 4rem;
 }
 
-
 .hero-banner .contact-img {
   width: 50vw;
   margin-bottom: 4rem;
@@ -971,6 +970,7 @@ body {
 .card-content .blog-title {
   color: var(--pink);
   margin-top: 2rem;
+  text-align: left;
 }
 
 .card-content h3 {
