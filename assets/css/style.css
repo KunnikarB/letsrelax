@@ -1198,6 +1198,11 @@ body {
     width: auto;
   }
 
+  .hero-banner img {
+    width: 60%;
+    margin: 0 auto;
+  }
+
   .hero-banner .contact-img {
     width: 90%;
     margin: 0 auto;
@@ -1323,7 +1328,7 @@ body {
   }
 
   .hero-banner img {
-    width: 80vw;
+    width: 60%;
     margin: 0 auto;
   }
 
@@ -1405,6 +1410,9 @@ body {
   .hero-banner {
     max-width: max-content;
     margin-inline: auto;
+    & img {
+      width: 60%;
+    }
   }
 
   .hero .section-text {
