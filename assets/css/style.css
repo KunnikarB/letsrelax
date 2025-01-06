@@ -1245,6 +1245,7 @@ body {
   }
 
   .blog {
+  
     & h2 {
     font-size: var(--fs-3);
     }
