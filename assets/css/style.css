@@ -367,6 +367,7 @@ body {
   aspect-ratio: var(--width) / var(--height);
   background-color: var(--light-pink);
   overflow: hidden;
+  
 }
 
 .img-cover {
@@ -973,6 +974,11 @@ body {
   padding-block: 15px;
   text-align: center;
   border-radius: var(--radius-10);
+
+  & h2 {
+    color: var(--pink);
+    font-size: var(--fs-3);
+  }
 }
 
 .blog .blog-feed h2 {
@@ -1026,7 +1032,7 @@ body {
 }
 
 .blog-card .card-meta {
-  background-color: var(--light-pink);
+  background-color: var(--black);
   color: var(--green-btn);
   position: absolute;
   bottom: 0;
@@ -1036,20 +1042,17 @@ body {
   font-weight: var(--fw-500);
   text-transform: uppercase;
   border-top-right-radius: var(--radius-10);
-  border: 1px solid var(--green-btn);
+  border: 1px solid var(--white);
 }
 
-.blog-card .card-content {
-  padding: 0;
-}
 
 .card-content .section-title {
-  color: var(--green-btn);
+  color: var(--white);
   margin-top: 2rem;
   text-align: left;
-  font-size: var(--fs-3);
-  font-weight: var(--fw-800);
-  background-color: var(--light-pink);
+  font-size: var(--fs-4);
+  font-weight: var(--fw-500);
+  background-color: var(--black);
   display: inline-block;
   padding: 15px;
   border-radius: var(--radius-5);
@@ -1059,12 +1062,23 @@ body {
   color: var(--black);
   margin-top: 2rem;
   text-align: left;
+  font-size: var(--fs-4);
 }
 
 .card-content .blog-title-back {
   color: var(--black);
   margin-top: 2rem;
   text-align: left;
+}
+
+.card-text-title {
+  color: var(--black);
+  background-color: var(--light-pink);
+  padding: 15px;
+  font-size: var(--fs-5);
+  margin-block: 8px 12px;
+  font-weight: var(--fw-500);
+  border-radius: var(--radius-5);
 }
 
 .card-content .h2 {
@@ -1296,7 +1310,7 @@ body {
     color: var(--pink);
   }
   .hero-banner img {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
   }
   .hero-banner .hero-subtitle {
@@ -1435,7 +1449,7 @@ body {
   }
 
   .hero-banner img {
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
   }
 
