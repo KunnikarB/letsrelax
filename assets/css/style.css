@@ -1337,7 +1337,9 @@ body {
  * responsive for larger than 575px screen
  */
  @media (min-width: 320px) {
-
+  .logo img {
+    width: 50px;
+  }
   
   .nav-open-btn {
     padding: 10px;
@@ -1350,14 +1352,6 @@ body {
     margin-bottom: 3rem;
    }
     
-   .logo img {
-    width: 40px;
-    margin-inline-start: 0;
-  }
-
-  .logo span {
-    font-size: 1.8rem;
-  }
   .h1 {
     font-size: var(--fs-2);
   }
@@ -1904,54 +1898,3 @@ body {
     grid-template-columns: 1fr 0.6fr 0.9fr 1fr;
   }
 }
-
-/**
- * responsive for larger than 1400px screen
- */
- @media (min-width: 1400px) {
-  /*** CUSTOM PROPERTY */
-
-  :root {
-    /*** typography */
-
-    --fs-1: 8rem;
-    --fs-2: 6rem;
-    --fs-4: 2.5rem;
-    --fs-5: 2.5rem;
-  }
-
-  /*** REUSED STYLE */
-  .logo {
-    font-size: var(--fs-2);
-   
-    & img {
-      margin-right: 0;
-    }
-  }
-
-  .container,
-  .header .container {
-    max-width: 2000px;
-    padding: 20px 50px;
-  }
-
-  .hero::after {
-    width: 500px;
-  }
-
-  .abs-img-1 {
-    top: 150px;
-    right: -50px;
-    width: 300px;
-  }
-
-  .abs-img-2 {
-    bottom: 40px;
-    left: -100px;
-    width: 400px;
-  }
-
-  .footer-top .container {
-    grid-template-columns: 1fr 0.7fr 1fr 1fr;
-  }
- }
