@@ -447,11 +447,10 @@ body {
   display: flex;
   align-items: center;
   margin-inline-start: -8px;
-  
 
   & img {
     margin-inline-end: 15px;
-    margin-left: 2rem;
+    
   }
 
   & span {
@@ -470,7 +469,7 @@ body {
  .logo ion-icon {
   color: var(--white);
   font-size: 40px;
-  margin-right: 8px;
+  margin-right: 4px;
 }
 
 
@@ -479,7 +478,7 @@ body {
   background-color: var(--green-btn);
   padding: 20px 15px;
   border-radius: var(--radius-8);
-  margin-right: 2rem;
+  
 }
 
 .nav-open-btn .line {
