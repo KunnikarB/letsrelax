@@ -130,7 +130,7 @@ html {
 
 body {
   background-color: var(--light-pink);
-  color: var(--black);
+  color: var(--white);
   font-size: 1.6rem;
   line-height: 1.6;
   border: 1px solid var(--green-btn);
@@ -173,6 +173,12 @@ body {
 
 .section {
   padding-block: var(--section-padding);
+}
+
+.bg-back {
+  background-color: var(--black);
+  padding: 5px;
+  border-radius: var(--radius-5);
 }
 
 .bg-dark {
@@ -382,6 +388,7 @@ body {
   overflow-x: auto;
   padding-block-end: 30px;
   scroll-snap-type: inline mandatory;
+  scroll-behavior: smooth;
 }
 
 .scrollbar-item {
@@ -390,7 +397,7 @@ body {
 }
 
 .has-scrollbar::-webkit-scrollbar {
-  height: 10px;
+  height: 15px;
 }
 
 .has-scrollbar::-webkit-scrollbar-track,
@@ -581,17 +588,23 @@ body {
 
 .hero-content h2 {
   color: var(--pink);
+  background-color: var(--black);
 }
 
 .hero-content .contact-title {
   color: var(--pink);
-  font-size: var(--fs-2);
+  background-color: var(--black);
+  font-size: var(--fs-3);
   font-weight: var(--fw-500);
   margin-block: 20px;
+  display: inline-block;
+  padding: 15px;
+  border-radius: var(--radius-8);
 }
 
 .hero-subtitle {
   color: var(--green-btn);
+  background-color: var(--black);
   margin-inline: auto;
   padding: 5px;
   padding-inline-end: 15px;
@@ -605,7 +618,7 @@ body {
 
 .hero-subtitle .strong {
   display: inline-block;
-  background-color: var(--black);
+  background-color: var(--width);
   color: var(--pink);
   padding: 2px 15px;
   margin-inline-end: 15px;
@@ -622,8 +635,19 @@ body {
   text-align: justify;  
 }
 
+.hero .section-text {
+  color: var(--black);
+  border: 1px solid var(--pink);
+  padding: 15px;
+  font-size: var(--fs-4);
+  font-weight: var(--fw-500);
+}
+
 .hero .section-text-about {
-  color: var(--white);
+  color: var(--black);
+  border: 1px solid var(--pink);
+  padding: 15px;
+  border-radius: var(--radius-10);
   font-size: var(--fs-4);
 }
 
@@ -806,6 +830,7 @@ body {
   & .section-text {
     text-align: center;
     font-weight: var(--fw-500);
+    
   }
   
 }
@@ -875,6 +900,16 @@ body {
   border-radius: var(--radius-5);
 }
 
+.class .class-subtitle {
+  color: var(--pink);
+  background-color: var(--black);
+  padding: 15px;
+  font-size: var(--fs-4);
+  font-weight: var(--fw-500);
+  margin-block: 20px;
+  border-radius: var(--radius-5);
+}
+
 .class-card {
   background-color: var(--black);
   border-radius: var(--radius-10);
@@ -941,6 +976,7 @@ body {
   margin-block: 20px;
   & p {
     font-weight: var(--fw-800);
+   
   }
 }
 
@@ -948,8 +984,8 @@ body {
   background-color: var(--green-btn);
   border-radius: 50%;
   padding: 4px;
-  width: 30px;
-  height: 30px; 
+  width: 50px;
+  height: 50px; 
 }
 
 /* .class-card .progress-wrapper {
