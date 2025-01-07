@@ -426,7 +426,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  padding-block: 10px;
+  padding-block: 0;
   /* box-shadow: var(--shadow-1); */
   z-index: 4;
   border: none; 
@@ -450,11 +450,12 @@ body {
 
   & img {
     margin-inline-end: 15px;
-    
+    margin-left: 2rem;
   }
 
   & span {
     color: var(--white);
+    margin-right: 2rem;
   }
 
   & span:hover {
@@ -1349,7 +1350,12 @@ body {
    }
     
    .logo img {
-    width: 50px;
+    width: 40px;
+    margin-inline-start: 0;
+  }
+
+  .logo span {
+    font-size: 1.8rem;
   }
   .h1 {
     font-size: var(--fs-2);
@@ -1811,7 +1817,7 @@ body {
 
   .container,
   .header .container {
-    max-width: 1140px;
+    max-width: 1440px;
   }
 
   .btn {
@@ -1833,8 +1839,13 @@ body {
 
   /*** HEADER */
 
+  .logo span {
+    font-size: var(--fs-3);
+    margin-inline-start: 15px;
+  }
   .header .container {
-    padding-inline: 0;
+    padding-inline: 50px;
+    padding: 20px 50px;
   }
 
   /*** HERO */
@@ -1844,7 +1855,7 @@ body {
   }
 
   .hero .hero-banner {
-    width: 80%;
+    width: 100%;
   }
 
   .hero .section-text {
@@ -1885,3 +1896,54 @@ body {
     grid-template-columns: 1fr 0.6fr 0.9fr 1fr;
   }
 }
+
+/**
+ * responsive for larger than 1400px screen
+ */
+ @media (min-width: 1400px) {
+  /*** CUSTOM PROPERTY */
+
+  :root {
+    /*** typography */
+
+    --fs-1: 8rem;
+    --fs-2: 6rem;
+    --fs-4: 2.5rem;
+    --fs-5: 2.5rem;
+  }
+
+  /*** REUSED STYLE */
+  .logo {
+    font-size: var(--fs-2);
+   
+    & img {
+      margin-right: 0;
+    }
+  }
+
+  .container,
+  .header .container {
+    max-width: 2000px;
+    padding: 20px 50px;
+  }
+
+  .hero::after {
+    width: 500px;
+  }
+
+  .abs-img-1 {
+    top: 150px;
+    right: -50px;
+    width: 300px;
+  }
+
+  .abs-img-2 {
+    bottom: 40px;
+    left: -100px;
+    width: 400px;
+  }
+
+  .footer-top .container {
+    grid-template-columns: 1fr 0.7fr 1fr 1fr;
+  }
+ }
