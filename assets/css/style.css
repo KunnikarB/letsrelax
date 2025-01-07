@@ -834,13 +834,13 @@ body {
   }
   
 }
-.video-player{
+.video .video-player{
   width: 100%;
   height: 100%;
   margin: 0 auto;
   & video {
-    width: 80%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 }
@@ -1337,6 +1337,7 @@ body {
  * responsive for larger than 575px screen
  */
  @media (min-width: 320px) {
+
   
   .nav-open-btn {
     padding: 10px;
@@ -1446,8 +1447,15 @@ body {
     & .section-text {
     font-size: var(--fs-4);
     }
+    
   }
- }
+  .video-player {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+    }
+ 
 @media (min-width: 575px) {
   /*** CUSTOM PROPERTY */
 
