@@ -672,6 +672,7 @@ body {
 
 .about {
   overflow: hidden; 
+  background-color: var(--black);
 }
 
 .about-banner {
@@ -704,7 +705,7 @@ body {
     color: var(--pink);
     border: 1px solid var(--pink);
     border-radius: var(--radius-10);
-    padding: 4px;
+    padding: 15px;
    }
 }
 
@@ -862,6 +863,7 @@ body {
   background-color: var(--black);
   padding: 15px;
   font-size: var(--fs-3);
+  border-radius: var(--radius-5);
 }
 
 .class-card {
@@ -994,6 +996,7 @@ body {
   color: var(--pink);
   background-color: var(--black);
   padding: 15px;
+  border-radius: var(--radius-5);
 }
 
 .blog .h2 {
@@ -1049,10 +1052,11 @@ body {
   background-color: var(--light-pink);
   display: inline-block;
   padding: 15px;
+  border-radius: var(--radius-5);
 }
 
 .card-content .blog-title {
-  color: var(--pink);
+  color: var(--black);
   margin-top: 2rem;
   text-align: left;
 }
@@ -1061,6 +1065,13 @@ body {
   color: var(--black);
   margin-top: 2rem;
   text-align: left;
+}
+
+.card-content .h2 {
+  color: var(--pink);
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
 }
 
 .card-content h3 {
