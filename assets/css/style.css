@@ -273,7 +273,7 @@ body {
   background-color: var(--green-btn);
   color: var(--white);
   margin: 1rem;
-  border: 1px solid var(--white);
+  font-weight: var(--fw-800);
 }
 
 .btn-primary:is(:hover, :focus) {
