@@ -1299,8 +1299,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  & span {
+    margin-inline: 5px;
+  }
 }
-  
+.nowrap {
+  white-space: nowrap;
+}
 }
 
 /*-----------------------------------*\
