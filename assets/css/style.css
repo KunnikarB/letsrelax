@@ -1243,6 +1243,7 @@ body {
 .footer-link:is(:hover, :focus) {
   color: var(--pink);
   box-shadow: var(--shadow-1);
+  cursor: pointer;
 }
 
 .footer-list-item {
@@ -1264,6 +1265,7 @@ body {
   background-color: var(--black);
   color: var(--pink);
   box-shadow: var(--shadow-1);
+  cursor: pointer;
 }
 
 .social-list {
@@ -1285,6 +1287,7 @@ body {
   box-shadow: var(--shadow-1);
   background-color: var(--black);
   color: var(--pink);
+  cursor: pointer;
 }
 
 .footer-bottom {
