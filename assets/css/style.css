@@ -234,11 +234,19 @@ body {
   color: var(--pink);
 }
 
+.container .hero-content .title {
+  font-size: var(--fs-1);
+}
+
 .container .h2 {
   color: var(--white);
   font-weight: var(--fw-800);
   margin-bottom: 4rem;
   margin-top: 6rem;
+}
+
+.about-content .hero-subtitle strong {
+  font-size: var(--fs-3);
 }
 
 .h3 {
@@ -564,7 +572,7 @@ body {
 
 .hero {
   text-align: center;
-  padding-block-start: calc(var(--section-padding) + 80px);
+  padding-block-start: calc(var(--section-padding) + 40px);
   padding-block-end: 0;
   overflow: hidden;
   margin-top: 0;
