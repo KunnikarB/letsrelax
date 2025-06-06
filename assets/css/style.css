@@ -91,7 +91,6 @@ button,
 strong,
 ion-icon {
   display: block;
-  
 }
 
 img {
@@ -162,6 +161,10 @@ body {
 
 .container {
   padding-inline: 15px;
+}
+
+.container .margin {
+  margin-bottom: 30px;
 }
 
 .container .center {
@@ -244,6 +247,7 @@ body {
   margin-bottom: 4rem;
   margin-top: 6rem;
 }
+
 
 .about-content .hero-subtitle strong {
   font-size: var(--fs-3);
@@ -714,6 +718,7 @@ body {
   margin: 0 auto;
   border-radius: var(--radius-10);
 }
+
 
 /*-----------------------------------*\
   #ABOUT
