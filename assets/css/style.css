@@ -310,6 +310,10 @@ body {
   border-radius: 20%;
 }
 
+.round-border {
+  border-radius: 5%;
+}
+
 .circle,
 .abs-img {
   position: absolute;
