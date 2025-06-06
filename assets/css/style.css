@@ -303,7 +303,11 @@ body {
 }
 
 .w-100 {
-  width: 100%;
+  width: 100%;  
+}
+
+.round {
+  border-radius: 20%;
 }
 
 .circle,
