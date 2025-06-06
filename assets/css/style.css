@@ -177,7 +177,7 @@ body {
 
 .bg-back {
   background-color: var(--black);
-  padding: 5px;
+  padding: 15px;
   border-radius: var(--radius-5);
 }
 
