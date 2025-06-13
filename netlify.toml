@@ -6,3 +6,5 @@
   from = "/"
   to = "/en/"
   status = 302
+
+  
