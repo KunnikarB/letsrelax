@@ -1373,6 +1373,15 @@ body {
     color: #ffffff;
 }
 
+.img iframe {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  border: none;
+  border-radius: 1rem;
+}
+
 
 /*-----------------------------------*\
   #MEDIA QUERIES
@@ -1647,6 +1656,18 @@ body {
   text-align: justify;  
   }
   
+  .hero .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.hero .container img {
+  max-width: 100%;
+  height: auto;
+  flex: 1 1 300px;
+}
+
 }
 
 /**
