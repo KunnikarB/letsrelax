@@ -60,51 +60,40 @@ document.addEventListener('DOMContentLoaded', function () {
   const langSvLink = document.getElementById('lang-sv');
   const currentPath = window.location.pathname;
 
-  let currentLang = 'en';
-  if (currentPath.startsWith('/sv/')) {
-    currentLang = 'sv';
-  }
+  let currentLang = currentPath.startsWith('/sv/') ? 'sv' : 'en';
 
-  // Ensure trailing slash is not included and filename is captured
-  let fileName = currentPath.split('/').pop();
-  if (!fileName || fileName === '') {
-    fileName = 'index.html';
-  }
+  const fileName = currentPath.split('/').pop() || 'index.html';
 
-  // Full mapping between English and Swedish pages
   const pageNameMap = {
     'index.html': 'index.html',
     'about.html': 'om-oss.html',
-    'om-oss.html': 'about.html',
     'contact.html': 'kontakt.html',
-    'kontakt.html': 'contact.html',
     'treatments.html': 'behandlingar.html',
-    'behandlingar.html': 'treatments.html',
     'fitness.html': 'fitness.html',
     'wellness.html': 'valbefinnande.html',
+    'om-oss.html': 'about.html',
+    'kontakt.html': 'contact.html',
+    'behandlingar.html': 'treatments.html',
     'valbefinnande.html': 'wellness.html',
   };
 
-  function getTranslatedPath(targetLang) {
-    const translatedFile = pageNameMap[fileName] || 'index.html';
-    return `/${targetLang}/${translatedFile}`;
+  function switchLanguage(targetLang) {
+    const targetPage = pageNameMap[fileName] || 'index.html';
+    const newUrl = `/${targetLang}/${targetPage}`;
+    window.location.href = newUrl;
   }
 
   if (langEnLink) {
-    langEnLink.addEventListener('click', function (event) {
-      event.preventDefault();
-      if (currentLang !== 'en') {
-        window.location.href = getTranslatedPath('en');
-      }
+    langEnLink.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (currentLang !== 'en') switchLanguage('en');
     });
   }
 
   if (langSvLink) {
-    langSvLink.addEventListener('click', function (event) {
-      event.preventDefault();
-      if (currentLang !== 'sv') {
-        window.location.href = getTranslatedPath('sv');
-      }
+    langSvLink.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (currentLang !== 'sv') switchLanguage('sv');
     });
   }
 });
