@@ -54,76 +54,50 @@ year.textContent = thisYear;
 
 // Switch En/Sv
 
+
 document.addEventListener('DOMContentLoaded', function () {
   const langEnLink = document.getElementById('lang-en');
   const langSvLink = document.getElementById('lang-sv');
   const currentPath = window.location.pathname;
 
-  // Determine current language
   let currentLang = 'en';
   if (currentPath.startsWith('/sv/')) {
     currentLang = 'sv';
   }
 
-  // Highlight active language
-  if (currentLang === 'en') {
-    langEnLink?.classList.add('active');
-    langSvLink?.classList.remove('active');
-  } else {
-    langSvLink?.classList.add('active');
-    langEnLink?.classList.remove('active');
-  }
-
-  // Page name mapping between English and Swedish
+  // Mapping between English and Swedish pages
   const pageNameMap = {
     'index.html': 'index.html',
-    'treatments.html': 'behandlingar.html',
     'about.html': 'om-oss.html',
     'contact.html': 'kontakt.html',
+    'treatments.html': 'behandlingar.html',
     'fitness.html': 'fitness.html',
-    'wellness.html': 'valbefinnande.html',
-    // Add more mappings as needed
+    'wellness.html': 'valbefinnande.html'
   };
 
   function getTranslatedPath(targetLang) {
-    let corePath = window.location.pathname;
+    let fileName = currentPath.split('/').pop();
 
-    // Remove current language folder
-    if (corePath.startsWith('/en/')) {
-      corePath = corePath.slice(4);
-    } else if (corePath.startsWith('/sv/')) {
-      corePath = corePath.slice(4);
+    if (!fileName || fileName === '') {
+      fileName = 'index.html';
     }
 
-    // Remove leading slash if exists
-    corePath = corePath.replace(/^\/+/, '');
-
-    // Handle root path
-    if (!corePath || corePath === '/') {
-      return `/${targetLang}/index.html`;
-    }
-
-    let targetPageName = corePath;
+    let translatedFile = fileName;
 
     if (targetLang === 'sv') {
-      targetPageName = pageNameMap[corePath] || 'index.html';
+      translatedFile = pageNameMap[fileName] || 'index.html';
     } else if (targetLang === 'en') {
-      const enPage = Object.keys(pageNameMap).find(
-        (key) => pageNameMap[key] === corePath
-      );
-      targetPageName = enPage || 'index.html';
+      translatedFile = Object.keys(pageNameMap).find(key => pageNameMap[key] === fileName) || 'index.html';
     }
 
-    return `/${targetLang}/${targetPageName}`;
+    return `/${targetLang}/${translatedFile}`;
   }
 
-  // Add click event to switch languages
   if (langEnLink) {
     langEnLink.addEventListener('click', function (event) {
       event.preventDefault();
       if (currentLang !== 'en') {
-        const targetPath = getTranslatedPath('en');
-        window.location.href = targetPath;
+        window.location.href = getTranslatedPath('en');
       }
     });
   }
@@ -132,43 +106,10 @@ document.addEventListener('DOMContentLoaded', function () {
     langSvLink.addEventListener('click', function (event) {
       event.preventDefault();
       if (currentLang !== 'sv') {
-        const targetPath = getTranslatedPath('sv');
-        window.location.href = targetPath;
+        window.location.href = getTranslatedPath('sv');
       }
     });
   }
-
-  // Highlight active nav link
-  const allNavLinks = document.querySelectorAll('.navbar-link');
-  const removeActiveClass = () => {
-    allNavLinks.forEach((link) => link.classList.remove('active'));
-  };
-
-  const setActiveNavLink = () => {
-    removeActiveClass();
-
-    const pathSegments = currentPath.split('/');
-    let currentFileName = pathSegments[pathSegments.length - 1] || 'index.html';
-
-    const englishEquivalent =
-      Object.keys(pageNameMap).find(
-        (key) => pageNameMap[key] === currentFileName
-      ) || currentFileName;
-
-    const targetLink = document.querySelector(
-      `.navbar-link[href="${englishEquivalent}"]`
-    );
-    if (targetLink) {
-      targetLink.classList.add('active');
-    }
-  };
-
-  setActiveNavLink();
-
-  // Update year automatically
-  const yearSpan = document.getElementById('year');
-  if (yearSpan) {
-    yearSpan.textContent = new Date().getFullYear();
-  }
 });
+
 
