@@ -65,31 +65,28 @@ document.addEventListener('DOMContentLoaded', function () {
     currentLang = 'sv';
   }
 
-  // Mapping between English and Swedish pages
+  // Ensure trailing slash is not included and filename is captured
+  let fileName = currentPath.split('/').pop();
+  if (!fileName || fileName === '') {
+    fileName = 'index.html';
+  }
+
+  // Full mapping between English and Swedish pages
   const pageNameMap = {
     'index.html': 'index.html',
     'about.html': 'om-oss.html',
+    'om-oss.html': 'about.html',
     'contact.html': 'kontakt.html',
+    'kontakt.html': 'contact.html',
     'treatments.html': 'behandlingar.html',
+    'behandlingar.html': 'treatments.html',
     'fitness.html': 'fitness.html',
-    'wellness.html': 'valbefinnande.html'
+    'wellness.html': 'valbefinnande.html',
+    'valbefinnande.html': 'wellness.html',
   };
 
   function getTranslatedPath(targetLang) {
-    let fileName = currentPath.split('/').pop();
-
-    if (!fileName || fileName === '') {
-      fileName = 'index.html';
-    }
-
-    let translatedFile = fileName;
-
-    if (targetLang === 'sv') {
-      translatedFile = pageNameMap[fileName] || 'index.html';
-    } else if (targetLang === 'en') {
-      translatedFile = Object.keys(pageNameMap).find(key => pageNameMap[key] === fileName) || 'index.html';
-    }
-
+    const translatedFile = pageNameMap[fileName] || 'index.html';
     return `/${targetLang}/${translatedFile}`;
   }
 
@@ -111,5 +108,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
+
 
 
