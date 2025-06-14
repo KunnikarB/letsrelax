@@ -54,49 +54,47 @@ year.textContent = thisYear;
 
 // Switch En/Sv
 
+  document.addEventListener('DOMContentLoaded', function () {
+    const langEnLink = document.getElementById('lang-en');
+    const langSvLink = document.getElementById('lang-sv');
 
-document.addEventListener('DOMContentLoaded', function () {
-  const langEnLink = document.getElementById('lang-en');
-  const langSvLink = document.getElementById('lang-sv');
-  const currentPath = window.location.pathname;
+    const pageMap = {
+      'index.html': 'index.html',
+      'about.html': 'om-oss.html',
+      'contact.html': 'kontakt.html',
+      'treatments.html': 'behandlingar.html',
+      'fitness.html': 'fitness.html',
+      'wellness.html': 'valbefinnande.html'
+    };
 
-  let currentLang = currentPath.startsWith('/sv/') ? 'sv' : 'en';
+    const currentPath = window.location.pathname;
+    const pathParts = currentPath.split('/');
+    const currentLang = pathParts[1];
+    const currentPage = pathParts[2] || 'index.html';
 
-  const fileName = currentPath.split('/').pop() || 'index.html';
+    function getTranslatedPage(targetLang) {
+      if (targetLang === 'en') {
+        const enPage = Object.keys(pageMap).find(
+          (key) => pageMap[key] === currentPage
+        );
+        return `/${targetLang}/${enPage || 'index.html'}`;
+      } else {
+        const svPage = pageMap[currentPage] || 'index.html';
+        return `/${targetLang}/${svPage}`;
+      }
+    }
 
-  const pageNameMap = {
-    'index.html': 'index.html',
-    'about.html': 'om-oss.html',
-    'contact.html': 'kontakt.html',
-    'treatments.html': 'behandlingar.html',
-    'fitness.html': 'fitness.html',
-    'wellness.html': 'valbefinnande.html',
-    'om-oss.html': 'about.html',
-    'kontakt.html': 'contact.html',
-    'behandlingar.html': 'treatments.html',
-    'valbefinnande.html': 'wellness.html',
-  };
-
-  function switchLanguage(targetLang) {
-    const targetPage = pageNameMap[fileName] || 'index.html';
-    const newUrl = `/${targetLang}/${targetPage}`;
-    window.location.href = newUrl;
-  }
-
-  if (langEnLink) {
-    langEnLink.addEventListener('click', function (e) {
+    langEnLink?.addEventListener('click', function (e) {
       e.preventDefault();
-      if (currentLang !== 'en') switchLanguage('en');
+      window.location.href = getTranslatedPage('en');
     });
-  }
 
-  if (langSvLink) {
-    langSvLink.addEventListener('click', function (e) {
+    langSvLink?.addEventListener('click', function (e) {
       e.preventDefault();
-      if (currentLang !== 'sv') switchLanguage('sv');
+      window.location.href = getTranslatedPage('sv');
     });
-  }
-});
+  });
+
 
 
 
