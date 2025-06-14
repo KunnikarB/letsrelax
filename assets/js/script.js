@@ -53,16 +53,19 @@ year.textContent = thisYear;
 
 
 // Switch En/Sv
+
 document.addEventListener('DOMContentLoaded', function () {
   const langEnLink = document.getElementById('lang-en');
   const langSvLink = document.getElementById('lang-sv');
   const currentPath = window.location.pathname;
 
+  // Determine current language
   let currentLang = 'en';
   if (currentPath.startsWith('/sv/')) {
     currentLang = 'sv';
   }
 
+  // Highlight active language
   if (currentLang === 'en') {
     langEnLink?.classList.add('active');
     langSvLink?.classList.remove('active');
@@ -71,12 +74,13 @@ document.addEventListener('DOMContentLoaded', function () {
     langEnLink?.classList.remove('active');
   }
 
+  // Page name mapping between English and Swedish
   const pageNameMap = {
     'index.html': 'index.html',
     'treatments.html': 'behandlingar.html',
     'about.html': 'om-oss.html',
     'contact.html': 'kontakt.html',
-    'fitness.html': 'fysisk-traning.html',
+    'fitness.html': 'fitness.html',
     'wellness.html': 'valbefinnande.html',
     // Add more mappings as needed
   };
@@ -84,43 +88,42 @@ document.addEventListener('DOMContentLoaded', function () {
   function getTranslatedPath(targetLang) {
     let corePath = window.location.pathname;
 
-    // Remove current language prefix
+    // Remove current language folder
     if (corePath.startsWith('/en/')) {
-      corePath = corePath.slice(4); // Remove "/en/"
+      corePath = corePath.slice(4);
     } else if (corePath.startsWith('/sv/')) {
-      corePath = corePath.slice(4); // Remove "/sv/"
+      corePath = corePath.slice(4);
     }
 
-    // Ensure no leading slash
-    if (corePath.startsWith('/')) {
-      corePath = corePath.slice(1);
-    }
+    // Remove leading slash if exists
+    corePath = corePath.replace(/^\/+/, '');
 
-    // If no page specified (e.g., root folder)
-    if (corePath === '' || corePath === '/') {
-      return `/${targetLang}/`;
+    // Handle root path
+    if (!corePath || corePath === '/') {
+      return `/${targetLang}/index.html`;
     }
 
     let targetPageName = corePath;
 
     if (targetLang === 'sv') {
-      targetPageName = pageNameMap[corePath] || corePath;
+      targetPageName = pageNameMap[corePath] || 'index.html';
     } else if (targetLang === 'en') {
       const enPage = Object.keys(pageNameMap).find(
         (key) => pageNameMap[key] === corePath
       );
-      targetPageName = enPage || corePath;
+      targetPageName = enPage || 'index.html';
     }
 
-    // Normalize to remove double slashes
-    return `/${targetLang}/${targetPageName}`.replace(/\/{2,}/g, '/');
+    return `/${targetLang}/${targetPageName}`;
   }
 
+  // Add click event to switch languages
   if (langEnLink) {
     langEnLink.addEventListener('click', function (event) {
       event.preventDefault();
       if (currentLang !== 'en') {
-        window.location.href = getTranslatedPath('en');
+        const targetPath = getTranslatedPath('en');
+        window.location.href = targetPath;
       }
     });
   }
@@ -129,11 +132,13 @@ document.addEventListener('DOMContentLoaded', function () {
     langSvLink.addEventListener('click', function (event) {
       event.preventDefault();
       if (currentLang !== 'sv') {
-        window.location.href = getTranslatedPath('sv');
+        const targetPath = getTranslatedPath('sv');
+        window.location.href = targetPath;
       }
     });
   }
 
+  // Highlight active nav link
   const allNavLinks = document.querySelectorAll('.navbar-link');
   const removeActiveClass = () => {
     allNavLinks.forEach((link) => link.classList.remove('active'));
@@ -160,8 +165,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   setActiveNavLink();
 
+  // Update year automatically
   const yearSpan = document.getElementById('year');
   if (yearSpan) {
     yearSpan.textContent = new Date().getFullYear();
   }
 });
+
