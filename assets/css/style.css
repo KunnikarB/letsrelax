@@ -1382,7 +1382,9 @@ body {
   border-radius: 1rem;
 }
 
-
+.hero .center-align {
+  margin: auto;
+}
 /*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
