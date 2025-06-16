@@ -473,13 +473,17 @@ body {
     margin-left: 2rem;
   }
 
+  & ion-icon {
+    margin: auto;
+  }
+
   & span {
     color: var(--white);
-    margin-right: 2rem;
+    margin: 0 auto;
+    text-align: center;
   }
 
   & span:hover {
-
     background-color: var(--green-btn);
     border-radius: var(--radius-8);
     transition: all 0.3ms linear;
@@ -490,7 +494,6 @@ body {
  .logo ion-icon {
   color: var(--white);
   font-size: 40px;
-  margin-right: 4px;
 }
 
 
@@ -548,6 +551,10 @@ body {
   font-size: 40px;
   padding: 10px;
   border-radius: var(--radius-8);
+}
+
+.navbar .navbar-list .navbar-link span {
+  text-align: center;
 }
 
 .navbar-list .navbar-link {
@@ -1407,6 +1414,10 @@ body {
   .navbar-link {
     margin-bottom: 3rem;
    }
+
+   .navbar .language-switcher {
+    margin: auto;
+   }
     
   .h1 {
     font-size: var(--fs-2);
@@ -1731,6 +1742,10 @@ body {
     color: var(--black);
   }
 
+  .logo ion-icon {
+    margin-right: 1rem;
+  }
+
   .navbar,
   .navbar.active {
     all: unset;
@@ -1916,8 +1931,13 @@ body {
 
   .logo span {
     font-size: var(--fs-3);
-    margin-inline-start: 15px;
+    margin-inline-start: 5px;
   }
+
+  .logo ion-icon {
+    margin-right: 1rem;
+  }
+  
   .header .container {
     padding-inline: 50px;
     padding: 20px 50px;
