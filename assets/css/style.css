@@ -1681,7 +1681,7 @@ body {
 
   .container,
   .header .container {
-    max-width: 960px;
+    max-width: 1000px;
   }
 
   /*** HEADER */
@@ -1740,11 +1740,12 @@ body {
   .navbar-list {
     display: flex;
     gap: 10px;
+
   }
 
-  .navbar-link {
+  .navbar-list .navbar-link {
     color: var(--white);
-    font-size: unset;
+    font-size: 2rem;
     padding: 0 10px;
     margin-block-end: 0;
   }
@@ -1888,6 +1889,10 @@ body {
   .container,
   .header .container {
     max-width: 1440px;
+  }
+
+  .navbar-list .navbar-link {
+    font-size: 2.5rem;
   }
 
   .btn {
