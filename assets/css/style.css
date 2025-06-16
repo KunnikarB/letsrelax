@@ -475,6 +475,7 @@ body {
 
   & ion-icon {
     margin: auto;
+    font-size: 30px;
   }
 
   & span {
@@ -493,7 +494,7 @@ body {
 
  .logo ion-icon {
   color: var(--white);
-  font-size: 40px;
+  font-size: 30px;
 }
 
 
