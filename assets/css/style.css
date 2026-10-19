@@ -159,6 +159,13 @@ body {
   #REUSED STYLE
 \*-----------------------------------*/
 
+.kb-logo {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  
+}
+
 .container {
   padding-inline: 15px;
 }
