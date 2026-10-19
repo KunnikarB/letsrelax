@@ -6,16 +6,16 @@
 :root {
   /*** colors*/
 
-  --black: #000000;
-  --pink: #EE3F99;
-  --white: #ffffff;
+  --black: #da9f87;
+  --pink: #664930;
+  --white: #F7F3EE;
   --orange: #FD3D0B;
   --lavender: #E6E6FA;
-  --pink-bg: #EE3F99;
-  --green-btn: #7A9649;
-  --brown: #3C2D24;
-  --lemon-green: #808E5D;
-  --light-pink: #FFB6C1;
+  --pink-bg: #da9f87;
+  --green-btn: #01573d;
+  --brown: #3c2d24;
+  --lemon-green: #01573d;
+  --light-pink: #ffe3d7;
 
   /*** typography*/
 
