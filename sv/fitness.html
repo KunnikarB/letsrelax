@@ -23,27 +23,26 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "HealthAndBeautyBusiness",
+    "@type": "MassageBusiness",
     "name": "Let's Relax",
-    "image": "https://letsrelaxstockholm.netlify.app/assets/images/class-yoga-massage.png",
-    "description": "Personlig fitness- och massagebehandling i Stockholm för bättre återhämtning, smärtlindring och välmående.",
+    "description": "Certifierad massageterapi och wellness-tjänster i Stockholm.",
+    "url": "https://letsrelaxstockholm.netlify.app/sv/index.html",
+    "telephone": "+46 7007286868",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Wallingatan 37",
+      "streetAddress": "Luntmakargatan 15",
       "addressLocality": "Stockholm",
-      "postalCode": "111 24",
+      "postalCode": "111 37",
       "addressCountry": "SE"
     },
-    "telephone": "+46-70-072-8686",
-    "url": "https://letsrelaxstockholm.netlify.app/sv/fitness.html",
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 59.336651,
-      "longitude": 18.060017
+      "latitude": 59.33664,
+      "longitude": 18.06392
     },
     "sameAs": [
-      "https://www.facebook.com/letsrelaxstockholm",
-      "https://www.instagram.com/let_s_relax_stockholm"
+      "https://www.facebook.com/kbwellnessstudio",
+      "https://www.instagram.com/kb_wellness.studio"
     ]
   }
   </script>
@@ -80,7 +79,7 @@
             <a href="index.html" class="navbar-link" data-nav-link>Hem</a>
           </li>
           <li>
-            <a href="om-oss.html" class="navbar-link" data-nav-link>Om oss</a>
+            <a href="om-oss.html" class="navbar-link" data-nav-link>Om mig</a>
           </li>
           <li>
             <a href="fitness.html" class="logo navbar-link active" data-nav-link>
@@ -521,43 +520,41 @@
 
   <footer class="footer">
 
-    <div class="section footer-top">
+    <div class="section footer-top has-bg-image">
       <div class="container">
 
         <div class="footer-brand">
+          
+          <div class="wrapper">
+            <img class="kb-logo" src="../assets/images/KBcreative-wellnessLogo.png" width="34" height="34" loading="lazy" alt="Klocka">
 
-          <a href="fitness.html" class="logo">
-            <ion-icon name="barbell-sharp" aria-hidden="true"></ion-icon>
-
-            <span class="span">F.I.T</span>
-          </a>
-
-          <p class="footer-brand-text">
-            Let's Relax Massage Stockholm
-          </p>
-
+            <p class="footer-brand-text">
+            KB Wellness Studio
+            </p>
+            
+          </div>
           <div class="wrapper">
 
-            <img src="../assets/images/footer-clock.webp" width="34" height="34" loading="lazy" alt="Klocka">
+            <img class="kb-logo" src="../assets/images/footer-clock.webp" width="34" height="34" loading="lazy" alt="Klocka">
 
             <ul class="footer-brand-list">
 
               <li>
-                <p class="footer-brand-title">Måndag - Fredag</p>
+                <p class="footer-brand-title">Tisdag - Lördag</p>
 
-                <p>09:00 - 20:00</p>
+                <p>08:00 - 21:00</p>
               </li>
 
               <li>
-                <p class="footer-brand-title">Lördag - Söndag</p>
+                <p class="footer-brand-title">Söndag - Måndag</p>
 
-                <p>10:00 - 18:00</p>
+                <p>Stängt</p>
               </li>
 
             </ul>
 
           </div>
-
+          
         </div>
 
         <ul class="footer-list">
@@ -567,7 +564,7 @@
           </li>
 
           <li>
-            <a href="index.html" class="footer-link">Hem</a>
+            <a href="#top" class="footer-link">Hem</a>
           </li>
 
           <li>
@@ -576,6 +573,10 @@
 
           <li>
             <a href="behandlingar.html" class="footer-link">Behandlingar</a>
+          </li>
+
+          <li>
+            <a href="fitness.html" class="footer-link">F.I.T</a>
           </li>
 
           <li>
@@ -596,33 +597,34 @@
 
           <li class="footer-list-item">
             <div class="icon">
-              <a href="kontakt.html#map">
+              <a href="contact.html#map" aria-label="visa karta">
               <ion-icon name="location" aria-hidden="true"></ion-icon>
             </div>
 
             <address class="address footer-link">
-              Wallingatan 37, 111 24 Stockholm, Sverige
-            </address></a>
+              Luntmakargatan 15, 111 37 Stockholm, Sverige
+            </address>
+            </a>
           </li>
 
           <li class="footer-list-item">
             <div class="icon">
-              <ion-icon name="call" aria-hidden="true"></ion-icon>
+            <a href="tel:+46700728686" class="footer-link" aria-label="ring nu">
+              <ion-icon name="call" aria-hidden="true">
+              </ion-icon>
             </div>
-
-            <div>
-              <a href="tel:+46700728686" class="footer-link">+46 70-072-8686</a>
-            </div>
+              +46 70-072-8686
+            </a>           
           </li>
 
           <li class="footer-list-item">
             <div class="icon">
-              <ion-icon name="mail" aria-hidden="true"></ion-icon>
+              <a href="mailto:letsrelaxsweden@gmail.com" class="footer-link" aria-label="e-post">
+                <ion-icon name="mail" aria-hidden="true">
+                </ion-icon>
             </div>
-
-            <div>
-              <a href="mailto:letsrelaxsweden@gmail.com" class="footer-link">letsrelaxsweden@gmail.com</a>
-            </div>
+              kbwellnessstudio@gmail.com
+              </a>
           </li>
         </ul>
 
@@ -632,35 +634,37 @@
           </li>
 
           <li class="footer-list-item">
-              <a target="_blank" href="https://www.facebook.com/letsrelaxstockholm" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon> </a>
+          
+              <a target="_blank" href="https://www.facebook.com/kbwellnessstudio" class="social-link" aria-label="facebook">
+              <ion-icon name="logo-facebook"></ion-icon></a>
               <p>Facebook</p>
+            
           </li>
 
           <li class="footer-list-item">
-            <a target="_blank" href="https://www.instagram.com/let_s_relax_stockholm" class="social-link">
+            <a target="_blank" href="https://www.instagram.com/kb_wellness.studio" class="social-link" aria-label="instagram">
               <ion-icon name="logo-instagram"></ion-icon>
             </a>
             <p>Instagram</p>
           </li>
 
           <li class="footer-list-item">
-            <a target="_blank" href="https://www.linkedin.com/in/kunnikar/" class="social-link">
+            <a target="_blank" href="https://www.linkedin.com/in/kunnikar/" class="social-link" aria-label="linkedin">
               <ion-icon name="logo-linkedin"></ion-icon>
             </a>
             <p>Linkedin</p>
           </li>
-        </ul>
+        </ul>  
       </div>
     </div>
 
     <div class="footer-bottom">
         <p class="copyright">
-          <span class="nowrap">&copy;
+          <span class="nowrap"> &copy;
             <time id="year"> </time>
           </span>
-          <span class="nowrap"> Let's Relax Stockholm </span> | Alla rättigheter förbehållna
-        </p>
+          <span class="nowrap"> KB Wellness Studio </span> | Alla rättigheter förbehållna
+        </p>    
     </div>
     <br>
   </footer>
