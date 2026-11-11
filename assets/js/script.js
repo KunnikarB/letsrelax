@@ -446,3 +446,88 @@ if (track && slides.length > 0 && dotsContainer) {
     startAuto();
   });
 }
+
+
+
+
+// GALLERY SLIDER - Certificates & Memberships
+
+document.querySelectorAll('.gallery-slider').forEach((slider) => {
+
+  const track = slider.querySelector('.gallery-track');
+  const slides = slider.querySelectorAll('.gallery-slide');
+  const prev = slider.querySelector('.prev');
+  const next = slider.querySelector('.next');
+
+  let index = 0;
+  let autoSlide;
+
+  function visibleSlides() {
+    if (window.innerWidth <= 480) return 1;
+    if (window.innerWidth <= 768) return 2;
+    return 3;
+  }
+
+  function updateSlider() {
+
+    const slideWidth = slider.clientWidth;
+    const gap = parseFloat(getComputedStyle(track).gap) || 0;
+
+    const maxIndex = Math.max(
+      0,
+      slides.length - visibleSlides()
+    );
+
+    index = Math.min(index, maxIndex);
+
+    const actualSlideWidth =
+      slides[0].getBoundingClientRect().width;
+
+    track.style.transform =
+      `translateX(-${index * (actualSlideWidth + gap)}px)`;
+  }
+
+  function nextSlide() {
+    const maxIndex = Math.max(0, slides.length - visibleSlides());
+
+    index = index >= maxIndex ? 0 : index + 1;
+
+    updateSlider();
+  }
+
+  function prevSlide() {
+    const maxIndex = Math.max(0, slides.length - visibleSlides());
+
+    index = index <= 0 ? maxIndex : index - 1;
+
+    updateSlider();
+  }
+
+  next.addEventListener('click', nextSlide);
+  prev.addEventListener('click', prevSlide);
+
+  function startAutoSlide() {
+    clearInterval(autoSlide);
+
+    if (slides.length > visibleSlides()) {
+      autoSlide = setInterval(nextSlide, 4000);
+    }
+  }
+
+  slider.addEventListener('mouseenter', () => {
+    clearInterval(autoSlide);
+  });
+
+  slider.addEventListener('mouseleave', startAutoSlide);
+
+  window.addEventListener('resize', () => {
+    updateSlider();
+    startAutoSlide();
+  });
+
+  updateSlider();
+  startAutoSlide();
+
+});
+
+
