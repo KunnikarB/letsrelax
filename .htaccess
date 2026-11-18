@@ -1,0 +1,11 @@
+
+Options -MultiViews
+
+RewriteEngine On
+
+DirectoryIndex index.html
+
+# Clean URLs for English and Swedish pages
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(en|sv)/([A-Za-z0-9_-]+)/?$ $1/$2.html [END]
